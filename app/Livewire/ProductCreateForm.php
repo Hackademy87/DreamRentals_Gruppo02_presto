@@ -6,7 +6,7 @@ use App\Models\Product;
 use Livewire\Component;
 
 class ProductCreateForm extends Component
-{   
+{
     public $name;
     public $price;
     public $description;
@@ -23,18 +23,18 @@ class ProductCreateForm extends Component
     ];
     public function store(){
         $this->validate();
-        Product::create([ 
-            'name'=>$this->name,   
-            'price'=>$this->price, 
+        Product::create([
+            'name'=>$this->name,
+            'price'=>$this->price,
             'description'=>$this->description,
         ]);
-         $this->reset(); 
+         $this->reset();
     }
-    
+
 
     public function render()
     {
         return view('livewire.product-create-form');
     }
-    
+
 }

@@ -9,10 +9,10 @@
 </head>
 <body>
     <x-navbar></x-navbar>
-    
+
+
+
     {{$slot}}
-    
-    
     @livewireScripts
 </body>
 </html>
