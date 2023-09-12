@@ -21,11 +21,11 @@ class DatabaseSeeder extends Seeder
             'email' => 'andrea@andrea.com',
             'password' => Hash::make('123456789')
         ],
-            Profile::create([
-                'role'=> 'admin',
-                'nickname'=> 'Andrew',
-                'user_id'=> 1
-            ])
+            // Profile::create([
+            //     'role'=> 'admin',
+            //     'nickname'=> 'Andrew',
+            //     'user_id'=> 1
+            // ])
         );
 
         \App\Models\User::factory()->create([
@@ -33,11 +33,11 @@ class DatabaseSeeder extends Seeder
             'email' => 'lorenzo@lorenzo.com',
             'password' => Hash::make('123456789')
         ],
-            Profile::create([
-            'role'=> 'admin',
-            'nickname'=> 'Lore',
-            'user_id'=> 2
-            ])
+            // Profile::create([
+            // 'role'=> 'admin',
+            // 'nickname'=> 'Lore',
+            // 'user_id'=> 2
+            // ])
         );
 
         \App\Models\User::factory()->create([
@@ -45,11 +45,11 @@ class DatabaseSeeder extends Seeder
             'email' => 'davide@davide.com',
             'password' => Hash::make('123456789')
         ],
-            Profile::create([
-            'role'=> 'admin',
-            'nickname'=> 'Dave',
-            'user_id'=> 3
-            ])
+            // Profile::create([
+            // 'role'=> 'admin',
+            // 'nickname'=> 'Dave',
+            // 'user_id'=> 3
+            // ])
         );
     }
 }
