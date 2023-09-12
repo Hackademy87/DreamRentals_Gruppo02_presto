@@ -4,6 +4,8 @@ namespace App\Livewire;
 
 use App\Models\Product;
 use Livewire\Component;
+use App\Models\Category;
+use Illuminate\Http\Request;
 
 class ProductCreateForm extends Component
 {
@@ -21,11 +23,21 @@ class ProductCreateForm extends Component
         'price.required'=>'Il prezzo non puó essere vuoto',
         'description.required'=>'La descrizione non puó essere vuota',
     ];
-    public function store(){
+
+
+    public function create(Request $request)
+    {
+        $categories = Category::all();
+        return view('product.create',compact('categories'));
+    }
+
+
+    public function store(Request $request){
         $this->validate();
         Product::create([
             'name'=>$this->name,
             'price'=>$this->price,
+            'category_id'=>$request->input('category_id'),
             'description'=>$this->description,
         ]);
          $this->reset();

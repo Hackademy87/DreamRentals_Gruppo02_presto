@@ -7,7 +7,7 @@
         </div>
         <div class="row">
             <div class="col-12">
-                <livewire:product-create-form />
+                <livewire:product-create-form/>
             </div>
         </div>
     </div>
