@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
+
+    public function home()
+    {
+        return view('welcome');
+    }
     /**
      * Display a listing of the resource.
      */
@@ -18,9 +23,9 @@ class ProductController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        return view('product.create');
     }
 
     /**
