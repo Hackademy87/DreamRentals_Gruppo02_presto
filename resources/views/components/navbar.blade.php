@@ -7,7 +7,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{{route('welcome')}}">Home</a>
+          <a class="nav-link active" aria-current="page" href="">Home</a>
         </li>
 
         {{-- @if (Auth::user() !== null)
@@ -33,7 +33,30 @@
       </ul>
 
 
-
+<form class="d-flex" role="search" action="" method="GET">
+        <input class="form-control me-2" type="search" placeholder="Search" name="search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+  <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        @if(Auth::user() == null)
+          <li class="nav-item">
+            <a class="btn btn-primary" href="{{route('login')}}">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-secondary mx-2" href="{{route('register')}}">Registrati</a>
+          </li>
+        @else
+          <li class="nav-item">
+            {{ Auth::user()->name }}
+          </li>
+          <li class="nav-item">
+            <form action="{{ route('logout') }}" method="POST">
+              @csrf
+              <button class="btn btn-secondary mx-2" >Logout</button>
+            </form>
+          </li>
+        @endif
+      </ul>
 
 
     </div>
