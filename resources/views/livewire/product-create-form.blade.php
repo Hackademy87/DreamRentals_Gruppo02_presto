@@ -15,6 +15,19 @@
             <input type="text" class="form-control" wire:model.blur="description">
             <div class="text-danger">@error('description') {{ $message }} @enderror</div> 
         </div>
+        
+        <div class="mb-3"> 
+            <label  class="form-label">Categoria</label> 
+            <select class="form-control" wire:model.blur="category_id"> 
+                
+                <option value="null" disabled >seleziona una categoria</option> 
+                
+                @foreach($productCategories as $category) 
+                    <option value="{{$category->id}}">{{$category->name}}</option> 
+                @endforeach 
+
+            </select> 
+      </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 </div>

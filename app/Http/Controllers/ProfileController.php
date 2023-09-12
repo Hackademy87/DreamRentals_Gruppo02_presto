@@ -2,17 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Product;
-use App\Models\Category;
+use App\Models\Profile;
 use Illuminate\Http\Request;
 
-class ProductController extends Controller
+class ProfileController extends Controller
 {
-
-    public function home()
-    {
-        return view('welcome');
-    }
     /**
      * Display a listing of the resource.
      */
@@ -24,10 +18,9 @@ class ProductController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create(Request $request)
+    public function create()
     {
-        $categories = Category::all();
-        return view('product.create');
+        //
     }
 
     /**
@@ -35,13 +28,13 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+        //
     }
-
 
     /**
      * Display the specified resource.
      */
-    public function show(Product $product)
+    public function show(Profile $profile)
     {
         //
     }
@@ -49,7 +42,7 @@ class ProductController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Product $product)
+    public function edit(Profile $profile)
     {
         //
     }
@@ -57,7 +50,7 @@ class ProductController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Product $product)
+    public function update(Request $request, Profile $profile)
     {
         //
     }
@@ -65,7 +58,7 @@ class ProductController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Product $product)
+    public function destroy(Profile $profile)
     {
         //
     }
