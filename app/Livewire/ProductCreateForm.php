@@ -33,7 +33,7 @@ class ProductCreateForm extends Component
 
 
     public function store(Request $request){
-       
+
         $this->validate();
         $this->user_id=Auth::user()->id;
          Product::create([
@@ -43,7 +43,7 @@ class ProductCreateForm extends Component
             'description'=>$this->description,
             'user_id'=>$this->user_id
         ]);
-        
+
         return redirect('')->route('product.create')->with('message','BRAVO.., HAI INSERITO UN ARTICOLO');
     }
 

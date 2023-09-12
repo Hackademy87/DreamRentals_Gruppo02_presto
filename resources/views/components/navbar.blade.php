@@ -21,7 +21,13 @@
             Dropdown
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
+
+            @foreach($productCategories as $category)
+
+            <li><a class="dropdown-item" href="{{route('product.bycategory',compact('category'))}}">{{$category->name}}</a></li>
+
+          @endforeach
+
           </ul>
         </li>
       </ul>
