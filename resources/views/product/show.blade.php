@@ -50,16 +50,16 @@
     <!--first carosel -->
     <base href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/wanaka-tree.jpg">
     <div id="carousel">
-    <figure id="spinner">
-        <img src="wanaka-tree.jpg" alt>
-        <img src="still-lake.jpg" alt>
-        <img src="" alt>
-        <img src="paradise.jpg" alt>
-        <img src="morekai.jpg" alt>
-        <img src="milky-blue-lagoon.jpg" alt>
-        <img src="lake-tekapo.jpg" alt>
-        <img src="milford-sound.jpg" alt>
-    </figure>
+        <figure id="spinner">
+            <img src="wanaka-tree.jpg" alt>
+            <img src="still-lake.jpg" alt>
+            <img src="still-lake.jpg" alt>
+            <img src="paradise.jpg" alt>
+            <img src="morekai.jpg" alt>
+            <img src="milky-blue-lagoon.jpg" alt>
+            <img src="lake-tekapo.jpg" alt>
+            <img src="milford-sound.jpg" alt>
+        </figure>
     </div>
     <span style="float:left" class="ss-icon" id="arrow-left">&lt;</span>
     <span style="float:right" class="ss-icon" id="arrow-right">&gt;</span>

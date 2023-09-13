@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<!-- <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Navbar</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,5 +60,38 @@
 
 
     </div>
+  </div>
+</nav> -->
+
+
+<!-- NAVBAR IMPORTED -->
+<nav class="navbar">
+  <div id="trapezoid" >
+    <a class="home" href="{{route('home')}}">Home</a>
+    <a href="#About" class="expandHome">Lavora con noi</a>
+     <div class="subnav">
+     <button class="subnavbtn">Categorie<i class="fa fa-caret-down"></i></button>
+       <div class="subnav-content">
+        <div id="subnav-trapezoid" class="d-flex">
+          @foreach($productCategories as $category)
+            <a class="dropdown-item" href="{{route('product.bycategory',compact('category'))}}">{{$category->name}}</a>
+          @endforeach
+        </div>
+       </div>
+    </div>
+  
+    <div class="subnav">
+     <button class="subnavbtn">Servizi<i class="fa fa-caret-down"></i></button>
+      <div class="subnav-content">
+        <div class="subnav-trapezoid">
+          @auth
+            <a class="nav-link" href="{{route('product.create')}}">Crea Prodotti</a>
+          @endauth
+          <a href="#Services">Web Design</a>
+          <a href="#Services">Mobile App Development</a>
+         </div>
+      </div>
+    </div>
+      
   </div>
 </nav>
