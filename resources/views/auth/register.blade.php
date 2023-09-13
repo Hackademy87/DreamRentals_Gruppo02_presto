@@ -2,10 +2,10 @@
 
 
 
-<div class="container">
-    <div class="row">
-        <div class="col-12 col-md-6">
-<h1>REgistrati</h1>
+<div class="container my-5">
+    <div class="row justify-content-center">
+    
+
 @if($errors->any())
 @foreach ($errors->all() as $error)
     <div class="alert alert-danger">
@@ -14,32 +14,40 @@
 @endforeach
 @endif
 
-
-<form action="{{route('register')}}" method="POST">
-
+<form class="form-container" action="{{route('register')}}" method="POST">
   @csrf
-<div class="mb-3">
-    <label class="form-label">nome</label>
-    <input type="text" name="name" class="form-control">
-  </div>
-  <div class="mb-3">
-    <label class="form-label">Email address</label>
-    <input type="email" name="email" class="form-control">
-  </div>
-  <div class="mb-3">
-    <label class="form-label">Password</label>
-    <input type="password" name="password"  class="form-control">
-  </div>
-  <div class="mb-3">
-    <label class="form-label">Conferma Password</label>
-    <input type="password" name="password_confirmation" class="form-control">
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+      <div class="logo-container">
+        Welcome!
+      </div>
+
+
+      <div class="line"></div>
+      <form class="form">
+        <div class="form-group">
+          <label for="email">Nome</label>
+          <input required="" placeholder="Enter your name" name="name" id="email" type="text" >
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input required="" placeholder="Enter your email" name="email" id="email" type="email">
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input required="" name="password" placeholder="Enter your password" id="password" type="password" >
+        </div>
+        <div class="form-group">
+          <label for="password">Conferma password</label>
+          <input name="password_confirmation" placeholder="Confirm your password" id="password" type="password">
+        </div>
+
+        <button type="submit" class="form-submit-btn">Sign In</button>
 </form>
- </div>
+
+
 </div>
 </div>
-</div>
+
+
 
 
 
