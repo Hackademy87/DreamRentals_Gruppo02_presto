@@ -11,7 +11,10 @@ class ProductController extends Controller
 
     public function home()
     {
-        return view('welcome');
+
+        $products = Product::orderBy('created_at', 'desc')->take(4)->get();
+
+        return view('welcome',compact('products'));
     }
     /**
      * Display a listing of the resource.

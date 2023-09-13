@@ -24,3 +24,4 @@ Route::get('admin/dashboard',[AdminController::class, 'dashboard'])->name('admin
 Route::get('/product/byCategory/{category}', [ProductController::class, 'byCategory'])->name('product.bycategory');
 
 Route::get('product/categorie/{category}',[ProductController::class,'indexByCategory'])->name('product.categorie');
+
