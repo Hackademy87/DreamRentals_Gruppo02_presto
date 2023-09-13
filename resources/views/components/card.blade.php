@@ -3,10 +3,17 @@
   <div class="card-body">
     <h5 class="card-title">{{$product->name}}</h5>
     <p class="card-text">{!!$product->description!!}</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+
+    @if($product->category) 
+      <a href="{{route('product.bycategory' , $product->category)}}"><p>{{ $product->category->name }}</p>  </a>
+    @else 
+      <p>Senza Categoria</p> 
+    @endif
+
+    <a href="{{route('product.show' , $product)}}" class="btn btn-primary">Go somewhere</a>
   </div>
-<div class="card-footer">
+  <div class="card-footer">
     <p>{{$product->price}}</p>
-</div>
+  </div>
 
 </div>
