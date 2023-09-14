@@ -1,8 +1,9 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ProductController;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RevisorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,13 +26,28 @@ Route::get('/product/byCategory/{category}', [ProductController::class, 'byCateg
 
 Route::get('/product/categorie/{category}',[ProductController::class,'indexByCategory'])->name('product.categorie');
 
+Route::get('/product/index',[ProductController::class,'index'])->name('product.index');
+
+
+
+
+
+
+
+
+
 
 
 // ROTTE PROTETTE
 Route::middleware(['auth'])->group(function () {
-    
+
     Route::get('/product/create', [ProductController::class, 'create'])->name('product.create');
-    
+
+    Route::get('/revisor/index',[RevisorController::class,'index'])->name('revisor.index');
+
+    Route::patch('/accetta/annuncio/{product}',[RevisorController::class,'acceptProduct'])->name('revisor.accept_product');
+
+    Route::patch('/rifiuta/annuncio/{product}',[RevisorController::class,'rejectProduct'])->name('revisor.reject_product');
 });
 
 

@@ -12,7 +12,7 @@ class ProductController extends Controller
     public function home()
     {
 
-        $products = Product::orderBy('created_at', 'desc')->take(4)->get();
+        $products = Product::where('is_accepted', true)->take(4)->get()->orderBy('created_at', 'desc');
 
         return view('welcome',compact('products'));
     }
@@ -21,7 +21,9 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        $products = Product::where('is_accepted',true)->take(4)->get()->orderBy('created_at','desc');
+
+        return view('product.index', compact('products'));
     }
 
     /**

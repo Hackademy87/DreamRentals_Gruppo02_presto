@@ -13,7 +13,18 @@
           <li class="nav-item">
             <a class="nav-link mx-2 active" aria-current="page" href="{{route('home')}}">Home</a>
           </li>
-         @auth
+
+          @auth
+          @if (Auth::user()->is_revisor)
+          <li>
+              <a class="position-relative" href="{{route('revisor.index')}}">Zona Revisore
+                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{{App\Models\Product::toBeRevisionedCount()}}
+                  <span class="visually-hidden">Messaggi non letti</span>
+                  </span>
+              </a>
+            @endif
+
+
           <li class="nav-item">
             <a class="nav-link mx-2" href="{{route('product.create')}}">Aggiungi Prodotti</a>
           </li>

@@ -18,7 +18,7 @@
                     <p class="card-text">{!!$product->description!!}</p>
                     <p class="card-text">{{$product->price}}€</p>
                     <div>
-                        <p class="card-text">Creato da : {{$product->user->profile->nickname}}</p>
+                        <p class="card-text">Creato da : {{$product->user->name}}</p>
                         <p class="card-text">Creato il : {{$product->created_at}}</p>
                     </div>
                 </div>
