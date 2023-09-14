@@ -1,10 +1,10 @@
 
 
-<style>
+<!-- <style>
     body {
     background: #222D32;
 }
-</style>
+</style> -->
 
 <div>
 <div class="container colorBack">

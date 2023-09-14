@@ -15,15 +15,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// ROTTE PUBBLICHE
+
 Route::get('/', [ProductController::class, 'home'])->name('home');
 
-Route::get('/product/create', [ProductController::class, 'create'])->name('product.create');
-
-Route::get('admin/dashboard',[AdminController::class, 'dashboard'])->name('admin.dashboard');
+Route::get('/product/show/{product}',[ProductController::class,'show'])->name('product.show');
 
 Route::get('/product/byCategory/{category}', [ProductController::class, 'byCategory'])->name('product.bycategory');
 
 Route::get('/product/categorie/{category}',[ProductController::class,'indexByCategory'])->name('product.categorie');
 
-Route::get('/product/show/{product}',[ProductController::class,'show'])->name('product.show');
 
+
+// ROTTE PROTETTE
+Route::middleware(['auth'])->group(function () {
+    
+    Route::get('/product/create', [ProductController::class, 'create'])->name('product.create');
+    
+});
+
+
+// ROTTE AMMINISTRAZIONEs
+Route::get('admin/dashboard',[AdminController::class, 'dashboard'])->name('admin.dashboard');

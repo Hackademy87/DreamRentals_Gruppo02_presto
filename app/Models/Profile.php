@@ -12,7 +12,7 @@ class Profile extends Model
     use HasFactory;
 
     public $fillable = [
-        'nickname','role', 'user_id'
+        'nickname', 'user_id'
     ];
 
     public function user(){

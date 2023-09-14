@@ -46,7 +46,7 @@
   button {
     width: 60px;
     height: 30px;
-    border: 2px solid #17C3B2;
+    border: 2px solid rgb(192,192,192);
     position: relative;
     overflow: hidden;
     background-color: transparent;
@@ -56,7 +56,7 @@
     transition: .3s;
     z-index: 1;
     font-family: inherit;
-    color: #17C3B2;
+    color:  var(---ColorSecondary);
    }
 
    button::before {
@@ -67,7 +67,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(45deg);
-    background: #17C3B2;
+    background: var(---ColorSecondary);
     transition: .5s ease;
     display: block;
     z-index: -1;

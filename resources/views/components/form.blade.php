@@ -5,21 +5,19 @@
   <div class="mb-3">
     <label class="form-label">Nome</label>
     <input type="text" name="name" class="form-control">
-
   </div>
   <div class="mb-3">
     <label  class="form-label">Categoria</label>
     <select class="form-control" name="category_id">
-
-    <option value="null" disabled >seleziona una categoria</option>
-    @foreach($categories as $category)
-    <option value="{{$category->id}}">{{$category->name}}</option>
-    @endforeach
-  </select>
+      <option value="null" disabled >seleziona una categoria</option>
+      @foreach($categories as $category)
+        <option value="{{$category->id}}">{{$category->name}}</option>
+      @endforeach
+    </select>
   </div>
 
 
-  {{-- <div class="mb-3">
+  <!-- <div class="mb-3">
     <label  class="form-label">materiale</label>
     <select class="form-control" name="materialId[]" multiple>
 
@@ -27,8 +25,8 @@
     @foreach($materials as $material)
     <option value="{{$material->id}}">{{$material->name}}</option>
     @endforeach
-  </select>
-  </div> --}}
+    </select>
+  </div>  -->
 
 
   <div class="mb-3">

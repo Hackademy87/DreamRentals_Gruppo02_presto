@@ -18,7 +18,7 @@
 
                 <div class="col-12 col-md-4">
 
-
+                    <x-card :product='$product'/>
 
                 </div>
 
