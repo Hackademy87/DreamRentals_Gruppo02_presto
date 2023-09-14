@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RevisorController;
 
@@ -28,6 +29,9 @@ Route::get('/product/categorie/{category}',[ProductController::class,'indexByCat
 
 Route::get('/product/index',[ProductController::class,'index'])->name('product.index');
 
+Route::get('/contact',[ContactController::class,'contact'])->name('contatti');
+
+Route::post('/contatti/nuovo',[ContactController::class,'newContact'])->name('contatti.nuovo');
 
 
 
@@ -43,13 +47,15 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/product/create', [ProductController::class, 'create'])->name('product.create');
 
-    Route::get('/revisor/index',[RevisorController::class,'index'])->name('revisor.index');
-
-    Route::patch('/accetta/annuncio/{product}',[RevisorController::class,'acceptProduct'])->name('revisor.accept_product');
-
-    Route::patch('/rifiuta/annuncio/{product}',[RevisorController::class,'rejectProduct'])->name('revisor.reject_product');
+    
 });
+Route::middleware(['is.revisor'])->group(function () {
+    Route::get('/revisor/index',[RevisorController::class,'index'])->name('revisor.index');
+    
+    Route::patch('/accetta/annuncio/{product}',[RevisorController::class,'acceptProduct'])->name('revisor.accept_product');
+    
+    Route::patch('/rifiuta/annuncio/{product}',[RevisorController::class,'rejectProduct'])->name('revisor.reject_product');
 
-
+});
 // ROTTE AMMINISTRAZIONEs
 Route::get('admin/dashboard',[AdminController::class, 'dashboard'])->name('admin.dashboard');
