@@ -34,26 +34,6 @@ class DatabaseSeeder extends Seeder
             'password' => Hash::make('123456789')
         ]);
 
-        \App\Models\User::factory()->create([
-            Profile::create([
-                
-                'nickname'=> 'Andrew',
-                'user_id'=> 1
-            ]),
-
-            Profile::create([
-                
-                'nickname'=> 'Lore',
-                'user_id'=> 2
-            ]),
-
-            Profile::create([
-                
-                'nickname'=> 'Dave',
-                'user_id'=> 3
-            ]),
-
-        ]);
     }
 
 }
