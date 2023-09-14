@@ -9,7 +9,7 @@
 </head>
 <body>
     <x-navbar></x-navbar>
-   
+
     @if(session('message'))
 
         <div class="alert alert-success">{{session('message')}}</div>
@@ -19,6 +19,11 @@
 
     {{$slot}}
     @livewireScripts
-    
+
 </body>
 </html>
+
+
+
+
+

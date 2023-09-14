@@ -7,16 +7,21 @@ use Livewire\Component;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Livewire\WithFileUploads;
+use Livewire\Attributes\Rule;
 
 class ProductCreateForm extends Component
 {
+
+    use WithFileUploads;
+
     public $category_id;
     public $name;
     public $price;
     public $user_id;
     public $description;
     public $img;
-    
+
 
     protected $rules=[
         'name'=>'required|min:3',
@@ -45,7 +50,7 @@ class ProductCreateForm extends Component
             'user_id'=>$this->user_id,
             'img' => $this->img != null ? $this->img->store('public/product') : "default.jpg"
         ]);
-        
+
         return redirect('')->route('product.create')->with('message','BRAVO.., HAI INSERITO UN ARTICOLO');
     }
 
