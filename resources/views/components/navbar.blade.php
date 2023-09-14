@@ -14,6 +14,12 @@
             <a class="nav-link mx-2 active" aria-current="page" href="{{route('home')}}">Home</a>
           </li>
 
+
+          <li class="nav-item">
+            <a class="nav-link mx-2 active" aria-current="page" href="{{route('product.index')}}">Tutti Gli Immobili</a>
+          </li>
+
+
           @auth
           @if (Auth::user()->is_revisor)
           <li>
