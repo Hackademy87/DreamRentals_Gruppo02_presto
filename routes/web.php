@@ -37,23 +37,18 @@ Route::post('/contatti/nuovo',[ContactController::class,'newContact'])->name('co
 
 
 
-
-
-
-
-
 // ROTTE PROTETTE
 Route::middleware(['auth'])->group(function () {
 
     Route::get('/product/create', [ProductController::class, 'create'])->name('product.create');
 
-    
+
 });
 Route::middleware(['is.revisor'])->group(function () {
     Route::get('/revisor/index',[RevisorController::class,'index'])->name('revisor.index');
-    
+
     Route::patch('/accetta/annuncio/{product}',[RevisorController::class,'acceptProduct'])->name('revisor.accept_product');
-    
+
     Route::patch('/rifiuta/annuncio/{product}',[RevisorController::class,'rejectProduct'])->name('revisor.reject_product');
 
 });
