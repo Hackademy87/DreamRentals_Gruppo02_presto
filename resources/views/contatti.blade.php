@@ -20,11 +20,7 @@ contatti
 <label class="form-label">Motivazioni</label>
 <input type="text" name="motive" class="form-control">
 </div>
-<div class="mb-3">
-<label class="form-label">email</label>
-<input type="email" name="email" class="form-control">
-</div>
-<button type="submit" class="btn btn-primary">invia</button>
+<button type="submit" class="btn btn-primary">invia la tua candidatura</button>
 </form>
 
 </div>

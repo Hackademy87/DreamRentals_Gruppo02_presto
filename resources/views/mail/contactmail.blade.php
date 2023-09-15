@@ -11,9 +11,11 @@
 <h1>Nuovo Contatto</h1>
 
 <ul>
-    <li>Nome : {{ $name }}</li>
+    <li>Nome : {{$name}}</li>
     <li>Motivazioni: {{$motive}}</li>
-    <li>Email: {{ $email }}</li>
+    <li>User: {{$user->name}}</li>
+    <li>Email: {{$user->email}}</li>
+
 </ul>
 
 

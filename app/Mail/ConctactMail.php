@@ -2,28 +2,32 @@
 
 namespace App\Mail;
 
+use App\Models\User;
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
-use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Mail\Mailables\Envelope;
+use Illuminate\Contracts\Queue\ShouldQueue;
 
 class ConctactMail extends Mailable
 {
     use Queueable, SerializesModels;
     public $name;
     public $motive;
-    public $email;
+    public $user;
+
     /**
      * Create a new message instance.
      */
-    public function __construct($_name, $_motive, $_email)
+    public function __construct($_name, $_motive, $user)
     {
         $this->name=$_name;
         $this->motive=$_motive;
-        $this->email=$_email;
+        $this->user = $user;
     }
+
+
 
     /**
      * Get the message envelope.
