@@ -70,6 +70,14 @@
               </li>
             @endif
 
+            <form action='{{route('products.search')}}' method='GET' class="d-flex">
+
+                <input name="searched" class="form-control me-2" placeholder="Search..." type="search">
+
+                <button class="btn btn-outline-success" type="submit">Ricerca</button>
+
+                </form>
+
         </ul>
       </div>
     </div>

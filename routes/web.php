@@ -35,6 +35,8 @@ Route::post('/contatti/nuovo',[ContactController::class,'newContact'])->name('co
 
 
 
+Route::get('ricerca/annuncio',[ProductController::class,'searchProducts'])->name('products.search');
+
 
 
 // ROTTE PROTETTE
