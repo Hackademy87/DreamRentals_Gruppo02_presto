@@ -1,0 +1,85 @@
+.header-custom{
+    height: 100vh;
+   
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    animation:  1s infinite alternate;
+   height: 500px;
+   transition: background-color 0.3s ease;
+
+  
+    
+   
+}
+.contenitore {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.897);
+   width: 100vw;
+    z-index: 99; 
+}
+
+
+.video-bg{
+width: 100%;
+height: 100vh;
+position: fixed;
+top: 0;
+left: 0;
+object-fit: cover;
+opacity: 0.5;
+z-index: 0;
+}
+
+
+.section{
+
+position: relative;
+z-index: 1;
+width: 100%;
+height: 100vh;
+
+}
+
+.title{
+text-align: center;
+width: 100%;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+position: fixed;
+top: 0;
+left: 0;
+margin-right: 25%;
+transform: scale(1);
+transition: all 1s cubic-bezier(.215, .61, .355, 1);
+opacity: 0;
+color: rgb(255, 255, 255);
+
+}
+
+
+
+.section.in-page .title{
+transform: scale(1.2);
+opacity: 1;
+}
+
+
+
+/* frasi centrali header */
+.centered-text {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+
+color: white;
+padding: 10px;
+text-align: center;
+}

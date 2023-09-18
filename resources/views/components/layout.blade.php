@@ -19,7 +19,7 @@
 
     {{$slot}}
     @livewireScripts
-
+    <x-footer/>
 </body>
 </html>
 
