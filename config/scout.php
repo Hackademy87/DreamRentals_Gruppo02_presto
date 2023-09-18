@@ -118,11 +118,11 @@ return [
 
     'tntsearch' => [
         'storage' => storage_path(),
-        'fuzziness' => env('TNTSEARCH_FUZZINESS',true),
+        'fuzziness' => env('TNTSEARCH_FUZZINES',true),
         'fuzzy' => [
             'prefix_length' => 2,
             'max_expansion'=> 50,
-            'distance' => 2
+            'distance' => 2 ,'no_limit' => true
         ],
         'asYouType' => false,
         'searchBoolean'=> env('TNTSEARCH_BOOLEAN', false),

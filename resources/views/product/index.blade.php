@@ -3,8 +3,11 @@
 
     <br><br><br><br>
     <div class="container-fluid mt-5">
-
         <div class="row">
+            <h2 class="text-center">TUTTI GLI IMMOBILI</h2> 
+        </div>
+        <div class="row">
+           
 
             @forelse($products as $product)
 
@@ -15,7 +18,7 @@
             </div>
 
             @empty
-    <h4 class="text-center">La ricerca non ha dato risultati</h4>
+            <h4 class="text-center">La ricerca non ha dato risultati</h4>
 
         @endforelse
            {{$products->links()}}

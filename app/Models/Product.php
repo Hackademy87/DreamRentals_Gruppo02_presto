@@ -17,7 +17,7 @@ class Product extends Model
 
 
 
-    public function toSearchableArray(){
+    public function toSearchableArray():array{
 
             $category = $this->category;
             $array =[
