@@ -17,14 +17,14 @@ class Product extends Model
 
 
 
-    public function toSearchebleArray(){
+    public function toSearchableArray(){
 
         $category = $this->category;
         $array =[
         'id'=> $this->id,
         'name'=> $this->name,
         'description'=>$this->description,
-        "category"=>$this->category
+        "category"=> $category,
         ];
         return $array;
         }
@@ -50,6 +50,12 @@ public function setAccepted($value){
     $this->save();
     return true;
 
+}
+
+public function setReverse()
+{
+    $this->setAccepted(null);
+    return redirect()->route('revisor.index');
 }
 
 public static function toBeRevisionedCount(){

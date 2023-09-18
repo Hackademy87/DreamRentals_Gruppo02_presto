@@ -1,9 +1,4 @@
 
-
-
-
-
-
   #neubar {
     background: var(---ColorPrimary);
     box-shadow: 4px 6px 12px rgba(0,0,0,0.4);
@@ -36,12 +31,6 @@
   a.navbar-brand {
     color: var(---ColorSecondary);
   }
-
-
-
-
-
-
 
   button {
     width: 60px;
@@ -80,3 +69,9 @@
    button:hover {
     color: #111;
    }
+
+
+
+
+
+

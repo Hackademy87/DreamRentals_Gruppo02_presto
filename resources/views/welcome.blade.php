@@ -3,8 +3,6 @@
 
 
 
-
-
     <div class="container my-5">
         <div class="row">
             <h2>ULTIME AGGIUNTE</h2>
@@ -25,6 +23,7 @@
         </div>
 
     </div>
+
 
     {{-- <a class="btn btn-success" href="{{route('product.create')}}">Aggiungi annuncio</a> --}}
 </x-layout>

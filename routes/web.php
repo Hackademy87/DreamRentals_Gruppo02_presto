@@ -53,6 +53,9 @@ Route::middleware(['is.revisor'])->group(function () {
 
     Route::patch('/rifiuta/annuncio/{product}',[RevisorController::class,'rejectProduct'])->name('revisor.reject_product');
 
+    Route::post('/revisor/reverse/{product}', [RevisorController::class,'setReverseProduct'])->name('revisor.reverse');
+
+    Route::delete('/elimina/annuncio/{product}',[RevisorController::class,'deleteProduct'])->name('revisor.delete');
 });
 // ROTTE AMMINISTRAZIONEs
 Route::get('admin/dashboard',[AdminController::class, 'dashboard'])->name('admin.dashboard');

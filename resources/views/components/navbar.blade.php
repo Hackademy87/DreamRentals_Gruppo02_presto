@@ -18,11 +18,6 @@
           <li class="nav-item">
             <a class="nav-link mx-2 active" aria-current="page" href="{{route('product.index')}}">Tutti Gli Immobili</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link mx-2 active" aria-current="page" href="{{route('contatti')}}">Lavora con noi</a>
-          </li>
-
-
 
           @auth
           @if (Auth::user()->is_revisor)
@@ -34,6 +29,9 @@
               </a>
             @endif
 
+            <li class="nav-item">
+            <a class="nav-link mx-2 active" aria-current="page" href="{{route('contatti')}}">Lavora con noi</a>
+            </li>
 
           <li class="nav-item">
             <a class="nav-link mx-2" href="{{route('product.create')}}">Aggiungi Prodotti</a>
@@ -70,7 +68,7 @@
               </li>
             @endif
 
-            <form action='{{route('products.search')}}' method='GET' class="d-flex">
+            <form action='{{route('products.search')}}' method='GET' class="d-flex ricerca">
 
                 <input name="searched" class="form-control me-2" placeholder="Search..." type="search">
 

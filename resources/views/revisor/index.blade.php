@@ -12,7 +12,33 @@
             </div>
         </div>
 
-        @if($product_to_check)
+
+        <div class="container">
+            @if($product_to_check)
+            <div class="row">
+
+
+                <div class="col-12 col-md-3">
+
+                <x-card :Product='$product_to_check'></x-card>
+                <form action="{{ route('revisor.accept_product', $product_to_check) }}" method="POST">
+                    @csrf
+                    @method('PATCH')
+                    <button type="submit" class="btn btn-primary">Accetta</button>
+                </form>
+
+                <form action="{{ route('revisor.reject_product', $product_to_check) }}" method="POST">
+                    @csrf
+                    @method('PATCH')
+                    <button type="submit" class="btn btn-primary">Rifiuta</button>
+                </form>
+
+               @endif
+                </div>
+
+
+
+
         <div class="row">
             <div class="col-12">
                 <table class="table">
@@ -25,25 +51,27 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($products as $product_to_check)
+                        @foreach ($product_is_revisioned as $product_to_check)
                             <tr>
                                 <th scope="row">NOME : {{$product_to_check->name}}</th>
                                 <td>{{$product_to_check->description}}</td>
                                 <td>{{$product_to_check->price}}</td>
                                 <td>{{$product_to_check->category->name}}</td>
+
                                 <td><img class="px-2 py-2" style="height:100px; width:100px;" src="{{ Storage::url($product_to_check->img)}}" alt=""></td>
                                 <td>
-                                    <form action="{{ route('revisor.accept_product', $product_to_check) }}" method="POST">
-                                        @csrf
-                                        @method('PATCH')
-                                        <button type="submit" class="btn btn-primary">Accetta</button>
-                                    </form>
 
-                                    <form action="{{ route('revisor.reject_product', $product_to_check) }}" method="POST">
+                                    <form method="POST" action="{{ route('revisor.reverse', $product_to_check) }}">
                                         @csrf
-                                        @method('PATCH')
-                                        <button type="submit" class="btn btn-primary">Rifiuta</button>
+                                        <button type="submit">Annulla Ultima Azione</button>
                                     </form>
+                                    @if ($product_to_check->is_accepted == false)
+                                    <form method="POST" action="{{ route('revisor.delete', $product_to_check) }}">
+                                        @method('DELETE')
+                                        @csrf
+                                        <button type="submit">ELIMINA</button>
+                                    </form>
+                                    @endif
                                 </td>
                             </tr>
                         @endforeach
@@ -51,7 +79,7 @@
                     </tbody>
                 </table>
             </div>
-            @endif
+
         </div>
     </div>
 </x-layout>
