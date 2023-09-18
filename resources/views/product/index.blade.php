@@ -1,14 +1,14 @@
 <x-layout>
 
 
-
-    <div class="container">
+    <br><br><br><br>
+    <div class="container-fluid mt-5">
 
         <div class="row">
 
             @forelse($products as $product)
 
-            <div class="col-12 col-md-3">
+            <div class="col-12 col-md-3 my-5">
 
             <a href="{{route('product.show',$product)}}"><x-card :Product='$product'></x-card></a>
 

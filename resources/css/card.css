@@ -1,5 +1,5 @@
 
-
+/* 
 a{
     text-decoration: none;
 }
@@ -15,7 +15,7 @@ h5{
     padding: 20px;
     text-align: center;
     transition: transform 0.2s;
-    /* z-index: 99; */
+    
 }
 
 .card:hover {
@@ -37,9 +37,74 @@ h5{
 .card p {
     font-size: 1rem;
     color: #777;
+} */
+
+a{
+    text-decoration: none;
 }
 
+.card-front img{
+    object-fit: cover;
+   
+}
 
+.card {
+
+    width: 400px;
+    height: 500px;
+    perspective: 1000px;
+  }
+  
+  .card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.999s;
+  }
+  
+  .card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  .card-front {
+    background-position:center ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color:   var(---ColorSecondary);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    border: 2px solid  var(---ColorSecondary);
+    border-radius: 10px;    
+    justify-content: center;
+    font-size: 24px;
+    transform: rotateY(0deg);
+  }
+  
+  .card-back {
+    background-color: var(---ColorSecondary);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 10px solid  var(---ColorSecondary);
+    border-radius: 10px;
+    justify-items: center;
+    font-size: 24px;
+    transform: rotateY(180deg);
+
+  }
+  
 
 
 

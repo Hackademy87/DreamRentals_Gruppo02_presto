@@ -19,14 +19,14 @@ class Product extends Model
 
     public function toSearchableArray(){
 
-        $category = $this->category;
-        $array =[
-        'id'=> $this->id,
-        'name'=> $this->name,
-        'description'=>$this->description,
-        "category"=> $category,
-        ];
-        return $array;
+            $category = $this->category;
+            $array =[
+                'id'=> $this->id,
+                'name'=> $this->name,
+                'description'=>$this->description,
+                "category"=> $category,
+            ];
+            return $array;
         }
 
 
