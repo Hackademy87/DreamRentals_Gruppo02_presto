@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Artisan;
 
 class RevisorController extends Controller
 {
@@ -47,4 +48,9 @@ if($product->is_accepted == false){
     return redirect()->back()->with('message', 'Prodotto eliminato con successo.');
 
 }
+
+    public function makeRevisor(User $user){
+        Artisan::call( 'app:makeUserRevisor', ['email'=> $user->email]);
+        return redirect()->route('home')->with('message', "L'utente è diventato revisore");
+    }
 }

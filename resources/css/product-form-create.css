@@ -122,3 +122,11 @@ label {
 .loginbttm {
     padding: 0px;
 }
+
+.img-preview{
+ height: 100px;
+ width: 200px;
+ background-position: center;
+ background-size: cover;
+ background-repeat: no-repeat;
+}

@@ -17,6 +17,8 @@
     <li>Email: {{$user->email}}</li>
 
 </ul>
+    <a href="{{route('make.revisor' , compact('user'))}}">Rendi Revisore.</a>
+
 
 </body>
 </html>

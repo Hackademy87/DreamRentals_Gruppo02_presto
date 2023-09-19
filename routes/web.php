@@ -30,9 +30,17 @@ Route::get('/product/categorie/{category}',[ProductController::class,'indexByCat
 
 Route::get('/product/index',[ProductController::class,'index'])->name('product.index');
 
+
+
+// EMAIL
+
 Route::get('/contact',[ContactController::class,'contact'])->name('contatti');
 
 Route::post('/contatti/nuovo',[ContactController::class,'newContact'])->name('contatti.nuovo');
+
+Route::get('/makeRevisor/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
+
+
 
 
 
@@ -47,6 +55,8 @@ Route::middleware(['auth'])->group(function () {
 
 
 });
+
+
 Route::middleware(['is.revisor'])->group(function () {
     Route::get('/revisor/index',[RevisorController::class,'index'])->name('revisor.index');
 
@@ -57,7 +67,10 @@ Route::middleware(['is.revisor'])->group(function () {
     Route::post('/revisor/reverse/{product}', [RevisorController::class,'setReverseProduct'])->name('revisor.reverse');
 
     Route::delete('/elimina/annuncio/{product}',[RevisorController::class,'deleteProduct'])->name('revisor.delete');
+
 });
+
+
 // ROTTE AMMINISTRAZIONEs
 Route::get('admin/dashboard',[AdminController::class, 'dashboard'])->name('admin.dashboard');
 
