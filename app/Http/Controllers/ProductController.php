@@ -32,7 +32,8 @@ class ProductController extends Controller
     public function create(Request $request)
     {
         $categories = Category::all();
-        return redirect()->route('product.create')->with('message', 'Prodotto aggiunto con successo.');
+        return view('product.create');
+        // return redirect()->route('product.create')->with('message', 'Prodotto aggiunto con successo.');
     }
 
     /**
