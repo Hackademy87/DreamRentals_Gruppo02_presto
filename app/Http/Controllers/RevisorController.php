@@ -44,7 +44,7 @@ public function deleteProduct(Product $product){
 if($product->is_accepted == false){
     $product->delete();
 }
-    return redirect()->back()->with('message', 'Azione annullata con successo.');
+    return redirect()->back()->with('message', 'Prodotto eliminato con successo.');
 
 }
 }

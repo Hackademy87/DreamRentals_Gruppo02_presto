@@ -1,78 +1,3 @@
-/* 
-  #neubar {
-    background: var(---ColorPrimary);
-    box-shadow: 4px 6px 12px rgba(0,0,0,0.4);
-    border-radius:0px 0px 40px 40px;
-
-  }
-
-  .nav-item .active {
-    border-radius: 6px;
-    background: var(---ColorPrimary);
-    box-shadow:  4px 4px 8px var(---ColorSecondary),
-                 -4px -4px 8px var(---ColorSecondary);
-  }
-  #neubar .dropdown-menu a:hover {
-    color: var()
-  }
-  #neubar .nav-item {
-    margin : auto 4px;
-  }
-  #neubar a {
-    color: var(---ColorSecondary);
-
-    padding-left:12px;
-    padding-right:12px;
-  }
-  #neubar .dropdown-menu {
-
-    background : var(---ColorPrimary)
-  }
-  a.navbar-brand {
-    color: var(---ColorSecondary);
-  }
-
-  button {
-    width: 60px;
-    height: 30px;
-    border: 2px solid rgb(192,192,192);
-    position: relative;
-    overflow: hidden;
-    background-color: transparent;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 6px;
-    transition: .3s;
-    z-index: 1;
-    font-family: inherit;
-    color:  var(---ColorSecondary);
-   }
-
-   button::before {
-    content: '';
-    width: 0;
-    height: 300%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(45deg);
-    background: var(---ColorSecondary);
-    transition: .5s ease;
-    display: block;
-    z-index: -1;
-   }
-
-   button:hover::before {
-    width: 105%;
-   }
-
-   button:hover {
-    color: #111;
-   }
-
-
- */
-
 
 #navbar {
     top: 0;
@@ -155,3 +80,11 @@
   font-size: 13.4px;
   right: 80px; 
 }
+
+
+.navbar-toggler{
+  border-color: var(---ColorBackground);
+  background-color: var(---ColorSecondary);
+}
+
+

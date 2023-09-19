@@ -19,7 +19,7 @@
 .contenitore {
     position: relative;
     background-color: rgba(255, 255, 255, 0.897);
-   width: 100vw;
+   width: 100%;
     z-index: 99; 
     height: 75vh;
     align-items: center;
