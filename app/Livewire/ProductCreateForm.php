@@ -21,20 +21,25 @@ class ProductCreateForm extends Component
     public $user_id;
     public $description;
     public $img;
+    public $images;
+    public $temporary_images;
 
 
     protected $rules=[
         'name'=>'required|min:3',
         'price'=>'required',
         'description'=>'required|min:5',
-        'category_id' => 'required'
+        'category_id' => 'required',
+        'images.*'=> 'image|max:1024',
+        'temporary_images.*'=> 'image|max:1024'
     ];
 
     protected $messages=[
         'name.required'=>'Il nome non puó essere vuoto',
         'price.required'=>'Il prezzo non puó essere vuoto',
         'description.required'=>'La descrizione non puó essere vuota',
-        'category_id.required' => 'La categoria non è stata selezionata'
+        'category_id.required' => 'La categoria non è stata selezionata',
+
     ];
 
 

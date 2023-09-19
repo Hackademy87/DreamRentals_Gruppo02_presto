@@ -51,10 +51,10 @@
                 <div class="form--group">
 
                     <label class="form-control-label">Copertina</label>
-
-                    <input type="file" class="form-control" wire:model="img">
-
-                    <div class="text-danger">@error('img') {{ $message }} @enderror</div>
+                    <input wire:model='temporary_images' type="file" name="images" multiple class="form-controll shadow @error ('temporary_images.*') is-invalid @enderror" placeholder="image">
+                    @error('temporary_images.*')
+                      <p class="text-danger mt-2" >{{$message}}</p>
+                       @enderror
                 </div>
                         <div class="col-lg-12 loginbttm">
                             <div class="col-lg-6 login-btm login-text">

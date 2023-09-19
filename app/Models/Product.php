@@ -3,11 +3,12 @@
 namespace App\Models;
 
 use App\Models\User;
+use App\Models\Image;
 use App\Models\Profile;
 use App\Models\Category;
+use Laravel\Scout\Searchable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Laravel\Scout\Searchable;
 
 class Product extends Model
 {
@@ -64,7 +65,9 @@ public static function toBeRevisionedCount(){
 
 }
 
-
+public function images(){
+    return $this->hasMany(Image::class);
+}
 
 
 
