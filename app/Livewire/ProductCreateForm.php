@@ -5,6 +5,7 @@ namespace App\Livewire;
 use App\Models\Product;
 use Livewire\Component;
 use App\Models\Category;
+use App\Models\Image;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Livewire\WithFileUploads;
@@ -19,6 +20,7 @@ class ProductCreateForm extends Component
     public $name;
     public $price;
     public $user_id;
+    public $validate;
     public $description;
     public $img;
     public $images;
@@ -39,10 +41,27 @@ class ProductCreateForm extends Component
         'price.required'=>'Il prezzo non puó essere vuoto',
         'description.required'=>'La descrizione non puó essere vuota',
         'category_id.required' => 'La categoria non è stata selezionata',
+        'temporary_image.*.required'=> "L\' immagine è richiesta",
+        'temporary_image.*.image' => "il file devono essere immagini",
+        'temporary_max.*.max' => "L\' immagine dev\' essere massimo di 1mb",
+        'images.image' =>"L\' immagine dev\' essere un\' immagine",
+        'image.max' =>"L\' immagine dev\' essere massimo di 1mb",
 
     ];
 
+    public function updatedTemporaryImages(){
+        if($this->validate(['temporary_images.*' => 'image|max:1024'])){
+            foreach($this->temporary_images as $image){
+                $this->images[] = $image;
+            }
+        }
+    }
 
+    public function removeImage($key){
+        if(in_array($key, array_keys($this->images))){
+            unset($this->images[$key]);
+        }
+    }
 
     public function store(Request $request){
        $this->user_id=Auth::user()->id;
@@ -53,9 +72,14 @@ class ProductCreateForm extends Component
             'category_id'=>$this->category_id,
             'description'=>$this->description,
             'user_id'=>$this->user_id,
-            'img' => $this->img != null ? $this->img->store('public/product') : "default.jpg"
+            // 'img' => $this->img != null ? $this->img->store('public/product') : "default.jpg"
         ]);
 
+        if(count($this->images)){
+            foreach($this->images as $image){
+                $this->product->images()->create(['path' => $image->store('images' , 'public')]);
+            }
+        }
         return redirect('')->route('product.create')->with('message','BRAVO.., HAI INSERITO UN ARTICOLO');
     }
 
