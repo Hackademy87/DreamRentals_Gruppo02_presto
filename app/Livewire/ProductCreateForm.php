@@ -22,7 +22,6 @@ class ProductCreateForm extends Component
     public $user_id;
     public $validate;
     public $description;
-    public $img;
     public $images;
     public $temporary_images;
 
@@ -64,20 +63,21 @@ class ProductCreateForm extends Component
     }
 
     public function store(Request $request){
+
        $this->user_id=Auth::user()->id;
+
         $this->validate();
-         Product::create([
+        $product = Product::create([
             'name'=>$this->name,
             'price'=>$this->price,
             'category_id'=>$this->category_id,
             'description'=>$this->description,
             'user_id'=>$this->user_id,
-            // 'img' => $this->img != null ? $this->img->store('public/product') : "default.jpg"
         ]);
 
         if(count($this->images)){
             foreach($this->images as $image){
-                $this->product->images()->create(['path' => $image->store('images' , 'public')]);
+                $product->images()->create(['path' => $image->store('images' , 'public')]);
             }
         }
         return redirect('')->route('product.create')->with('message','BRAVO.., HAI INSERITO UN ARTICOLO');

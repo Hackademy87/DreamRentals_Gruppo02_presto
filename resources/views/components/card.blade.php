@@ -7,8 +7,21 @@
 
 <div class="card">
   <div class="card-inner">
-        <div class="card-front " style="background-image: url('{{ Storage::url($product->img)}}')">
+
+        <div class="card-front">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                @if($product->images)
+                <div class="carousel-inner">
+                    @foreach ($product->images as $image)
+                  <div class="carousel-item @if($loop->first)active @endif">
+                    <img src="{{Storage::url($image->path)}}" class="d-block w-100" alt="...">
+                  </div>
+                  @endforeach
+                </div>
+                @endif
+              </div>
         </div>
+
         <div class="card-back">
             <h3 class="card-title">{{$product->name}}</h3>
             @if($product->category)
@@ -37,7 +50,6 @@
 
 
 
-<!-- vertical -->
 
 
 

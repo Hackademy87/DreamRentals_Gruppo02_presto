@@ -58,7 +58,19 @@
                                 <td>{{$product_to_check->price}}</td>
                                 <td>{{$product_to_check->category->name}}</td>
 
-                                <td><img class="px-2 py-2" style="height:100px; width:100px;" src="{{ Storage::url($product_to_check->img)}}" alt=""></td>
+                                <td>
+                                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                                    @if($product_to_check->images)
+                                    <div class="carousel-inner">
+                                        @foreach ($product_to_check->images as $image)
+                                      <div class="carousel-item @if($loop->first)active @endif">
+                                        <img width="80" height="100"  src="{{Storage::url($image->path)}}" class="d-block" alt="...">
+                                      </div>
+                                      @endforeach
+                                    </div>
+                                    @endif
+                                  </div>
+                                </td>
                                 <td>
 
                                     <form method="POST" action="{{ route('revisor.reverse', $product_to_check) }}">
