@@ -99,10 +99,15 @@ class ProductController extends Controller
 
         $products = Product::search($request->searched)->where('is_accepted', true)->paginate(6);
 
-            return view('product.index', compact('products'));
+    return view('product.index', compact('products'));
 
-            }
+    }
 
+
+public function setLanguage($lang){
+    session()->put('locale',$lang);
+    return redirect()->back();
+}
 
 }
 

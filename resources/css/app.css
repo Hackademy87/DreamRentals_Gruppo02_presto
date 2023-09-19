@@ -4,6 +4,7 @@
 @import './navbar.css';
 @import './card.css';
 @import './header.css';
+@import './icon.css';
 @import './footer.css';
 @import './product-form-create.css';
 
@@ -11,7 +12,7 @@
     ---ColorPrimary:rgba(0, 126, 167, 0.829);
     ---ColorSecondary:rgb(192,192,192);
     ---Colorbackground:rgb(251,251,251);
- 
+
 }
 
 *{
