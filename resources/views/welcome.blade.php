@@ -5,14 +5,14 @@
 
     <div class="container-fluid contenitore my-5">
         <div class="row ">
-            <h2 class="text-center border-bottom pt-2">ULTIME AGGIUNTE</h2>
+            <h2 class="text-center border-bottom pt-2">{{__('ui.ultimeAggiunte')}}</h2>
         </div>
-        
+
         <div class="row my-5  justify-content-around ">
-        
+
             @foreach($products as $product)
 
-            <div class="col-12 col-md-3 ">
+            <div class="col-12 col-md-3 pb-5 ">
 
                 <x-card :Product='$product'></x-card>
 

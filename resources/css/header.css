@@ -1,6 +1,6 @@
 .header-custom{
     height: 100vh;
-   
+
     background-position: center;
     background-size: auto;
     background-repeat: no-repeat;
@@ -12,16 +12,16 @@
    height: 500px;
    transition: background-color 0.3s ease;
 
-  
-    
-   
+
+
+
 }
 .contenitore {
     position: relative;
     background-color: rgba(255, 255, 255, 0.897);
    width: 100%;
-    z-index: 99; 
-    height: 75vh;
+    z-index: 99;
+    /* height: 75vh; */
     align-items: center;
 
 }

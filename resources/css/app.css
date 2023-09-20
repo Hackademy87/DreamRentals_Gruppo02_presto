@@ -6,6 +6,7 @@
 @import './header.css';
 @import './icon.css';
 @import './footer.css';
+@import './buttons.css';
 @import './product-form-create.css';
 
 :root{
@@ -19,8 +20,42 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+a{
+    color:white;
+}
 
 
 
 
 /* ---ColorPrimary:rgba(0, 33, 71, 0.815); */
+
+
+.product-details {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 400px; /* Limita la larghezza della tabella */
+    margin: 0 auto; /* Centra la tabella orizzontalmente */
+}
+
+.product-details td {
+    padding: 10px;
+    border: 1px solid #ddd; /* Aggiunge una sottile linea di separazione tra le celle */
+    text-align: left;
+}
+
+.product-details tr:nth-child(even) {
+    background-color: #f2f2f2; /* Colora le righe pari in grigio chiaro */
+}
+
+.product-details tr:hover {
+    background-color: #ddd; /* Cambia il colore delle righe al passaggio del mouse */
+}
+
+.product-details td:first-child {
+    font-weight: bold; /* Rendi il primo elemento in grassetto */
+}
+
+.product-details td:last-child {
+    text-align: right; /* Allinea l'ultimo elemento a destra */
+}
+

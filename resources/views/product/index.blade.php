@@ -4,10 +4,10 @@
     <br><br><br><br>
     <div class="container-fluid mt-5">
         <div class="row">
-            <h2 class="text-center">TUTTI GLI IMMOBILI</h2> 
+            <h2 class="text-center">{{__('ui.tutti')}}</h2>
         </div>
         <div class="row">
-           
+
 
             @forelse($products as $product)
 

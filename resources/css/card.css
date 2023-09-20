@@ -1,51 +1,11 @@
 
-/* 
-a{
-    text-decoration: none;
-}
-h5{
-    color: black !important
-}
-
-.card {
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 300px;
-    margin: 20px;
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.2s;
-    
-}
-
-.card:hover {
-    transform: scale(1.05);
-}
-
-.card img {
-    max-width: 100%;
-    height: auto;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.card h2 {
-    font-size: 1.5rem;
-    margin-top: 10px;
-}
-
-.card p {
-    font-size: 1rem;
-    color: #777;
-} */
-
 a{
     text-decoration: none;
 }
 
 .card-front img{
     object-fit: cover;
-   
+
 }
 
 .card {
@@ -54,7 +14,7 @@ a{
     height: 490px;
     perspective: 1000px;
   }
-  
+
   .card-inner {
     width: 100%;
     height: 100%;
@@ -62,11 +22,11 @@ a{
     transform-style: preserve-3d;
     transition: transform 0.999s;
   }
-  
+
   .card:hover .card-inner {
     transform: rotateY(180deg);
   }
-  
+
   .card-front,
   .card-back {
     position: absolute;
@@ -74,7 +34,7 @@ a{
     height: 100%;
     backface-visibility: hidden;
   }
-  
+
   .card-front {
     background-position:center ;
     background-size: cover;
@@ -83,30 +43,73 @@ a{
     color: #fff;
     display: flex;
     align-items: center;
-    border: 2px solid  var(---ColorSecondary);
-    border-radius: 10px;    
+    border: 2px solid white;
+    border-radius: 10px;
     justify-content: center;
     font-size: 24px;
     transform: rotateY(0deg);
   }
-  
+
   .card-back {
-    background-color: var(---ColorSecondary);
+    background: rgb(149,221,212);
+background: linear-gradient(347deg, rgba(149,221,212,1) 0%, rgba(149,221,212,0.87718837535014) 7%, rgba(149,221,212,0.87718837535014) 28%, rgba(255,255,255,0.711922268907563) 45%, rgba(149,221,212,1) 88%);
     color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 10px solid  var(---ColorSecondary);
+    border: 10px solid  white;
     border-radius: 10px;
     justify-items: center;
     font-size: 24px;
     transform: rotateY(180deg);
 
   }
-  
+
+
+  /* .card-back {
+    background-image: url('https://img.freepik.com/free-photo/close-up-pastel-blue-colored-paper-banner_23-2147981568.jpg?w=360&t=st=1695220502~exp=1695221102~hmac=3542a5258ff226cbf2a592a26e4608976da8fc89b6e89019d07bcca95ac6a55f');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+
+} */
+
+
+.card-back {
+    /* ... altre proprietà CSS ... */
+    text-align: center; /* Centra il testo orizzontalmente */
+}
+
+.card-back h3 {
+    font-size: 28px; /* Aumenta la dimensione del titolo */
+}
+
+.card-back p {
+    margin: 10px 0; /* Aggiungi spazi tra i paragrafi */
+    font-size: 18px; /* Imposta la dimensione del testo dei paragrafi */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Aggiungi un'ombra al testo */
+    /* ... altre proprietà CSS ... */
+}
+
+.card-back {
+    /* ... altre proprietà CSS ... */
+    color: #ffffff; /* Cambia il colore del testo principale */
+}
+
+.card-back p.card-text {
+    color: #000000; /* Cambia il colore del testo del paragrafo */
+}
+
+.card-back a {
+    color: #ff6600; /* Cambia il colore del link */
+    /* ... altre proprietà CSS ... */
+}
+
+.card-back {
+    /* ... altre proprietà CSS ... */
+    transition: background-color 0.3s ease-in-out; /* Aggiungi una transizione al cambio di sfondo */
+}
 
 
 
-
-  
