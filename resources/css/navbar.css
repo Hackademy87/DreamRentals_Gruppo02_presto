@@ -151,3 +151,9 @@ padding: 5px;
 #toggleMenu:checked + .dropdown-menu {
   display: block;
 }
+
+.close{
+  color: rgb(250, 250, 250);
+  font-size: 30px;
+  
+}

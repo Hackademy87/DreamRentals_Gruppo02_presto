@@ -21,6 +21,7 @@
     {{$slot}}
     @livewireScripts
     <x-footer/>
+    <script src="https://kit.fontawesome.com/75bc6d0aee.js" crossorigin="anonymous"></script>
 </body>
 </html>
 

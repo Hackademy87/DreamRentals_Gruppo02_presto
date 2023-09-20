@@ -17,7 +17,7 @@
     <li>Email: {{$user->email}}</li>
 
 </ul>
-    <a href="{{route('make.revisor' , compact('user'))}}">Rendi Revisore.</a>
+    <a class="btn button-custom" href="{{route('make.revisor' , compact('user'))}}">Rendi Revisore.</a>
 
 
 </body>
@@ -64,6 +64,24 @@
             color: #fff;
             text-decoration: none;
             border-radius: 5px;
+        }
+
+        .button-custom{
+            background-color: rgba(0, 70, 88, 0.9);
+            border-radius: 21px;
+            color: #fffff2;
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 900;
+            letter-spacing: .1em;
+            line-height: 18px;
+            padding: 12px 30px;
+            margin: 0 10px 10px 0;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: background-color .2s;
+            cursor: pointer;
+            position: relative;
         }
     </style>
 </head>
