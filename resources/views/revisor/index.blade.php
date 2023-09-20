@@ -19,8 +19,8 @@
 
 
                 <div class="col-12 col-md-3">
-
-                <x-card :Product='$product_to_check'></x-card>
+            
+                <x-card :product='$product_to_check'></x-card>
                 <form action="{{ route('revisor.accept_product', $product_to_check) }}" method="POST">
                     @csrf
                     @method('PATCH')

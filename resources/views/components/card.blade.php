@@ -7,14 +7,15 @@
 
 <div class="card">
   <div class="card-inner">
-
+    
         <div class="card-front">
             <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                @if($product->images)
+                @if(count($product->images)>0)
                 <div class="carousel-inner">
                     @foreach ($product->images as $image)
+                  
                   <div class="carousel-item @if($loop->first)active @endif">
-                    <img src="{{Storage::url($image->path)}}" class="d-block w-100" alt="...">
+                    <img src="{{!$image->get()->isEmpty() ? $image->getUrl(390 , 490) : '/public/default.jpg'}}" class="d-block w-100" alt="...">
                   </div>
                   @endforeach
                 </div>

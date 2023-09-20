@@ -2,14 +2,16 @@
 
 namespace App\Livewire;
 
+use App\Models\Image;
 use App\Models\Product;
 use Livewire\Component;
 use App\Models\Category;
-use App\Models\Image;
+use App\Jobs\ResizeImage;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Livewire\WithFileUploads;
 use Livewire\Attributes\Rule;
+use Livewire\WithFileUploads;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 
 class ProductCreateForm extends Component
 {
@@ -77,8 +79,13 @@ class ProductCreateForm extends Component
 
         if(count($this->images)){
             foreach($this->images as $image){
-                $product->images()->create(['path' => $image->store('images' , 'public')]);
+                // $product->images()->create(['path' => $image->store('images' , 'public')]);
+                $newFileName="products/{$product->id}";
+                $newImage=$product->images()->create(['path' => $image->store($newFileName , 'public')]);
+                dispatch(New ResizeImage($newImage->path, 390, 490));            
             }
+            File::deleteDirectory(storage_path('/app/livewire-tmp'));
+
         }
         return redirect('')->route('product.create')->with('message','BRAVO.., HAI INSERITO UN ARTICOLO');
     }
