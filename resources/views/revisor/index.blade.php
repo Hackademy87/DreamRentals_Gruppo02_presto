@@ -46,7 +46,7 @@
                 <thead>
                     <tr>
                         <th scope="col">Nome</th>
-                        <th scope="col">Descrizione</th>
+                        <!-- <th scope="col">Descrizione</th> -->
                         <th scope="col">Prezzo</th>
                         <th scope="col">Categoria</th>
                     </tr>
@@ -55,7 +55,7 @@
                     @foreach ($product_is_revisioned as $product_to_check)
                     <tr>
                         <th scope="row">{{$product_to_check->name}}</th>
-                        <td>{{$product_to_check->description}}</td>
+                        <!-- <td class="text-truncate">{{$product_to_check->description}}</td> -->
                         <td>{{$product_to_check->price}}</td>
                         <td>{{$product_to_check->category->name}}</td>
 

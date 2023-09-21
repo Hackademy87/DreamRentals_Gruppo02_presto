@@ -32,7 +32,7 @@
             @else
                 <p>Senza Categoria</p>
             @endif
-            <p class="card-text">{!!$product->description!!}</p>
+            <p class="card-text text-truncate col-9">{!!$product->description!!}</p>
 
             <p class="card-text">Creato da : {{$product->user->name}}</p>
             <p class="card-text">Creato il : {{$product->created_at}}</p>

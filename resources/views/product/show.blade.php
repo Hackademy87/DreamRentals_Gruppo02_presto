@@ -28,11 +28,11 @@
             <table class="product-details ">
                 <tr>
                     <td>Nome:</td>
-                    <td>{{$product->name}}</td>
+                    <td class="text-start">{{$product->name}}</td>
                 </tr>
                 <tr>
                     <td>Categoria:</td>
-                    <td> @if($product->category)
+                    <td class="text-start" > @if($product->category)
                         {{ $product->category->name }}
                         @else
                         <h2>Senza Categoria</h2>
@@ -41,11 +41,11 @@
                 </tr>
                 <tr>
                     <td>Descrizione:</td>
-                    <td>{{$product->description}}</td>
+                    <td class="text-start">{{$product->description}}</td>
                 </tr>
                 <tr>
                     <td>Prezzo:</td>
-                    <td>{{$product->price}}</td>
+                    <td class="text-start">{{$product->price}}</td>
                 </tr>
             </table>
 

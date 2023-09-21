@@ -27,11 +27,7 @@
                         <div class="text-danger">@error('name') {{ $message }} @enderror</div>
                     </div>
 
-                    <div class="form-group">
-                        <label class="form-control-label">Descrizione</label>
-                        <input type="text" class="form-control" wire:model.blur="description">
-                        <div class="text-danger">@error('description') {{ $message }} @enderror</div>
-                    </div>
+                    
 
                     <div class="form-group">
                         <label  class="form-control-label">Categoria</label>
@@ -47,7 +43,11 @@
                             <input type="numeric" class="form-control" wire:model.blur="price">
                             <div class="text-danger">@error('price') {{ $message }} @enderror</div>
                         </div>
-
+                        <div class="form-group">
+                            <label class="form-control-label">Descrizione</label>
+                            <textarea  class="form-control" cols="30" rows="7" wire:model.blur="description"></textarea>
+                            <div class="text-danger">@error('description') {{ $message }} @enderror</div>
+                        </div>
                         <div class="form--group">
 
                             <label class="form-control-label">Copertina</label>
@@ -56,6 +56,7 @@
                             <p class="text-danger mt-2" >{{$message}}</p>
                             @enderror
                         </div>
+                        
                         @if(!empty($images))
                             <div class="row">
                                 <div class="col-12">
@@ -73,6 +74,7 @@
                                 </div>
                             </div>
                         @endif
+                        
                         <button type="submit " class="btn btn-success shadow px-4 py-2 my-4"> Crea</button>
                     </div>
                 </form>
