@@ -45,8 +45,8 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
                         <th scope="col">Nome</th>
+                        <th scope="col">Descrizione</th>
                         <th scope="col">Prezzo</th>
                         <th scope="col">Categoria</th>
                     </tr>
@@ -54,7 +54,7 @@
                 <tbody>
                     @foreach ($product_is_revisioned as $product_to_check)
                     <tr>
-                        <th scope="row">NOME : {{$product_to_check->name}}</th>
+                        <th scope="row">{{$product_to_check->name}}</th>
                         <td>{{$product_to_check->description}}</td>
                         <td>{{$product_to_check->price}}</td>
                         <td>{{$product_to_check->category->name}}</td>
@@ -80,7 +80,11 @@
                 </tbody>
             </table>
         </div>
-
     </div>
 </div>
+
+
+
+
+
 </x-layout>

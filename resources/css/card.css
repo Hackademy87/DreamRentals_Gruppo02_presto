@@ -52,7 +52,7 @@ a{
 
   .card-back {
     background: rgb(149,221,212);
-background: linear-gradient(347deg, rgba(149,221,212,1) 0%, rgba(149,221,212,0.87718837535014) 7%, rgba(149,221,212,0.87718837535014) 28%, rgba(255,255,255,0.711922268907563) 45%, rgba(149,221,212,1) 88%);
+background: linear-gradient(347deg, rgba(149,221,212,1) 0%, rgba(149,221,212,0.87718837535014) 7%, rgba(149,221,212,0.87718837535014) 28%, rgba(255,255,255,0.711922268907563) 45%, rgb(149, 203, 221) 88%);
     color: #fff;
     display: flex;
     flex-direction: column;
