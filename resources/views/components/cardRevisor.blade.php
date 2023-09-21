@@ -53,10 +53,12 @@
                     <p>Spoof: <span class="{{$image->spoof}}"></span></p>
                     <p>Violence: <span class="{{$image->violence}}"></span></p>
                     <p>Racy: <span class="{{$image->racy}}"></span></p>
-
                 </div>
                 @endforeach
             </div>
         </div>
     </div>
 </div>
+
+
+

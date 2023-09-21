@@ -1,5 +1,9 @@
 <div>
-
+    <div class="row">
+   <div class="col-12">
+    <img src="https://pixabay.com/gifs/get/gd543b70210dc4c0dff801f346a25ace021b8c74c7cb0c2993387825be05d4d03228ca24571363d1b8fdc042c436147f4.gif" alt="Descrizione della GIF" class="gif-image">
+    </div>
+</div>
   <div class="container colorBack">
 
     <div class="row">
@@ -75,4 +79,6 @@
       </div>
     </div>
   </div>
+
+
 </div>
