@@ -25,7 +25,9 @@ a{
 }
 
 
-
+.vh50{
+    min-height: 50vh;
+}
 
 
 

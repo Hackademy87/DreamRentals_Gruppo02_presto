@@ -1,8 +1,6 @@
-
-
 <x-layout>
 
-    <div class="container my-4">
+    <div class="container vh50 my-4">
         <div class="row">
             <h4>Tutti gli utenti</h4>
         </div>
@@ -15,14 +13,14 @@
 
         <div class="container">
             @if($product_to_check)
-            
+
             <div class="row justify-content-center">
                 <div class="col-12 col-md-3">
 
                     <x-cardRevisor :product='$product_to_check'></x-cardRevisor>
                 </div>
 
-        
+
 
                 <div class="d-flex justify-content-center mt-3">
                     <form action="{{ route('revisor.accept_product', $product_to_check) }}" method="POST">
@@ -43,49 +41,52 @@
         </div>
     </div>
 
-<div class="container-fluid">
-    <div class="row justify-content-center mt-5">
-        <div class="col-12 col-md-8">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">Nome</th>
-                        <!-- <th scope="col">Descrizione</th> -->
-                        <th scope="col">Prezzo</th>
-                        <th scope="col">Categoria</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach ($product_is_revisioned as $product_to_check)
-                    <tr>
-                        <th scope="row">{{$product_to_check->name}}</th>
-                        <!-- <td class="text-truncate">{{$product_to_check->description}}</td> -->
-                        <td>{{$product_to_check->price}}</td>
-                        <td>{{$product_to_check->category->name}}</td>
 
 
-                        <td>
 
-                            <form method="POST" action="{{ route('revisor.reverse', $product_to_check) }}">
-                                @csrf
-                                <button class="btn button-custom" type="submit">Annulla</button>
-                            </form>
-                            @if ($product_to_check->is_accepted == false)
-                            <form method="POST" action="{{ route('revisor.delete', $product_to_check) }}">
-                                @method('DELETE')
-                                @csrf
-                                <button  class="btn button-customReject" type="submit">ELIMINA</button>
-                            </form>
-                            @endif
-                        </td>
-                    </tr>
-                    @endforeach
+    <div class="container-fluid">
+        <div class="row justify-content-center mt-5">
+            <div class="col-12 col-md-8">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nome</th>
+                            <!-- <th scope="col">Descrizione</th> -->
+                            <th scope="col">Prezzo</th>
+                            <th scope="col">Categoria</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($product_is_revisioned as $product_to_check)
+                        <tr>
+                            <th scope="row">{{$product_to_check->name}}</th>
+                            <!-- <td class="text-truncate">{{$product_to_check->description}}</td> -->
+                            <td>{{$product_to_check->price}}</td>
+                            <td>{{$product_to_check->category->name}}</td>
 
-                </tbody>
-            </table>
+
+                            <td>
+
+                                <form method="POST" action="{{ route('revisor.reverse', $product_to_check) }}">
+                                    @csrf
+                                    <button class="btn button-custom" type="submit">Annulla</button>
+                                </form>
+                                @if ($product_to_check->is_accepted == false)
+                                <form method="POST" action="{{ route('revisor.delete', $product_to_check) }}">
+                                    @method('DELETE')
+                                    @csrf
+                                    <button class="btn button-customReject" type="submit">ELIMINA</button>
+                                </form>
+                                @endif
+                            </td>
+                        </tr>
+                        @endforeach
+
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
-</div>
 
 
 
