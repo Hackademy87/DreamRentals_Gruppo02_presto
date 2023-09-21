@@ -24,15 +24,16 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-           $productCategories = Category::all();
-           View::share(compact('productCategories'));
+        if (Schema::hasTable('categories')) {
+            $productCategories = Category::all();
+            View::share(compact('productCategories'));
+        }
 
-          if(Schema::hasTable('products'))
-           {
-           $products = Product::all();
-               View::share('products',$products);
-          }
+        if (Schema::hasTable('products')) {
+            $products = Product::all();
+            View::share('products', $products);
+        }
 
-          Paginator::useBootstrapFive();
+        Paginator::useBootstrapFive();
     }
 }

@@ -35,8 +35,17 @@ return [
 'prezzo'=>"Price",
 'copertina'=>"Cover",
 'cancImg'=>"Delete",
-'crea'=>"create"
+'crea'=>"create",
 
+
+//Categoria//
+
+'appartamento'=>"Apartment",
+ 'villa'=>"Villa",
+ 'palazzo'=>"Palace'",
+ 'residence'=>"Residence",
+ 'complesso'=>"Complex",
+ 'casa vacanze'=>"Vacation Home"
 
 ];
 

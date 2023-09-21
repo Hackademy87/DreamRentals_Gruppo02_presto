@@ -42,7 +42,7 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             @foreach($productCategories as $category)
-              <a class="dropdown-item" href="{{route('product.bycategory',compact('category'))}}">{{$category->name}}</a>
+              <a class="dropdown-item" href="{{route('product.bycategory',compact('category'))}}">{{__("ui.$category->name")}}</a>
             @endforeach
           </ul>
         </li>
@@ -85,12 +85,12 @@
 
         @if(Auth::user() !== null)
             <p class="me-2 pt-2">{{ Auth::user()->name }}<p>
-            
+
             <form action="{{ route('logout') }}" method="POST">
               @csrf
               <button type="submit" class="hamburger nav-item" for="toggleMenu">
               <i class="fa-solid fa-x close"></i>
-                
+
             </button>
             </form>
 
