@@ -10,8 +10,10 @@ use App\Jobs\ResizeImage;
 use Illuminate\Http\Request;
 use Livewire\Attributes\Rule;
 use Livewire\WithFileUploads;
+use App\Jobs\GoogleVisionSafeSearch;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
+
 
 class ProductCreateForm extends Component
 {
@@ -82,7 +84,8 @@ class ProductCreateForm extends Component
                 // $product->images()->create(['path' => $image->store('images' , 'public')]);
                 $newFileName="products/{$product->id}";
                 $newImage=$product->images()->create(['path' => $image->store($newFileName , 'public')]);
-                dispatch(New ResizeImage($newImage->path, 390, 490));            
+                dispatch(New ResizeImage($newImage->path, 390, 490));
+                dispatch(New GoogleVisionSafeSearch($newImage->id));
             }
             File::deleteDirectory(storage_path('/app/livewire-tmp'));
 
