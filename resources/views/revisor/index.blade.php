@@ -15,11 +15,15 @@
 
         <div class="container">
             @if($product_to_check)
+            
             <div class="row justify-content-center">
                 <div class="col-12 col-md-3">
 
-                    <x-card :product='$product_to_check'></x-card>
+                    <x-cardRevisor :product='$product_to_check'></x-cardRevisor>
                 </div>
+
+        
+
                 <div class="d-flex justify-content-center mt-3">
                     <form action="{{ route('revisor.accept_product', $product_to_check) }}" method="POST">
                         @csrf
