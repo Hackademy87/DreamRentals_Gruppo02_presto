@@ -79,7 +79,7 @@ class ProductController extends Controller
 
     public function byCategory(Category $category){
 
-        return view('product.bycategory', compact('category'));
+        return view('product.byCategory', compact('category'));
 
     }
 
