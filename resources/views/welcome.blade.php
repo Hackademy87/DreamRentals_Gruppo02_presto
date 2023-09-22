@@ -42,7 +42,7 @@
       </div>
 
 
-      <img src="https://pixabay.com/gifs/get/gd543b70210dc4c0dff801f346a25ace021b8c74c7cb0c2993387825be05d4d03228ca24571363d1b8fdc042c436147f4.gif" alt="" class="gif-image fade-inImg watch">
+      <img src="/casa.gif" alt="" class="gif-image fade-inImg watch">
     </div>
     </div>
 
@@ -171,10 +171,6 @@ const text = document.querySelector(".sec-text");
 
   textLoad();
   setInterval(textLoad, 4000);
-
-
-
-
 
 
 </script>
