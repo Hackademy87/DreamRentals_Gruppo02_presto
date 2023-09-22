@@ -15,7 +15,7 @@
                     @foreach ($product->images as $image)
 
                   <div class="carousel-item @if($loop->first)active @endif">
-                    <img src="{{!$image->get()->isEmpty() ? $image->getUrl(390 , 490) : '/public/default.jpg'}}" class="d-block w-100" alt="...">
+                    <img class="img-card" src="{{!$image->get()->isEmpty() ? $image->getUrl(390 , 490) : '/public/default.jpg'}}" class="d-block w-100" alt="...">
                   </div>
                   @endforeach
                 </div>
