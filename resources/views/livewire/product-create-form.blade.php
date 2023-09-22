@@ -1,13 +1,10 @@
-<div>
-    <div class="row">
-   <div class="col-12">
-    <img src="https://pixabay.com/gifs/get/gd543b70210dc4c0dff801f346a25ace021b8c74c7cb0c2993387825be05d4d03228ca24571363d1b8fdc042c436147f4.gif" alt="Descrizione della GIF" class="gif-image">
-    </div>
-</div>
-  <div class="container colorBack">
 
-    <div class="row">
-      <div class="col-lg-3 col-md-2"></div>
+
+    <div class="row position-relative justify-content-center">
+      <div class="col-3 position-absolute gif">
+        <img src="/casa.gif" alt="Descrizione della GIF" class="gif-image">
+      </div>
+     
       <div class="col-lg-6 col-md-8 my-5 login-box">
         
         <div class="col-lg-12 login-title">
