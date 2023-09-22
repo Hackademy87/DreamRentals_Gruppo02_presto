@@ -10,12 +10,12 @@
 
 }
 
-#navbar.scrolled {
-  box-shadow: 0 2px 4px ;
-  text-decoration: none;
-  color: #fff;
-
-}
+  #navbar.scrolled {
+    box-shadow: 0 2px 4px ;
+    text-decoration: none;
+    color: #fff;
+  
+  }
 
 .home{
 font-weight:600;
