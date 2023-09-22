@@ -43,6 +43,18 @@
                 </div>
             </div>
         </div>
+        <div class="col-12 col-lg-6 google">
+        @foreach($product->images as $image)
+                    <h5 class="tc-accent">Tags</h5>
+                    <div class="p-2 d-flex">
+                        @if ($image->labels)
+                            @foreach ($image->labels as $label)
+                                <p class="d-inline">{{$label}}</p>
+                            @endforeach
+                        @endif
+                    </div>
+                    @endforeach
+                </div>
         <div class="col-6 google">
         <table class="table">
             <thead>

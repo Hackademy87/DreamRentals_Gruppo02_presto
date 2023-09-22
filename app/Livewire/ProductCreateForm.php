@@ -6,10 +6,12 @@ use App\Models\Image;
 use App\Models\Product;
 use Livewire\Component;
 use App\Models\Category;
+use App\Jobs\RemoveFaces;
 use App\Jobs\ResizeImage;
 use Illuminate\Http\Request;
 use Livewire\Attributes\Rule;
 use Livewire\WithFileUploads;
+use App\Jobs\GoogleVisionLabelImage;
 use App\Jobs\GoogleVisionSafeSearch;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
@@ -84,8 +86,11 @@ class ProductCreateForm extends Component
                 // $product->images()->create(['path' => $image->store('images' , 'public')]);
                 $newFileName="products/{$product->id}";
                 $newImage=$product->images()->create(['path' => $image->store($newFileName , 'public')]);
-                dispatch(New ResizeImage($newImage->path, 390, 490));
-                dispatch(New GoogleVisionSafeSearch($newImage->id));
+                RemoveFaces::withChain([
+                    new ResizeImage($newImage->path, 390, 490),
+                    new GoogleVisionSafeSearch($newImage->id),
+                    new GoogleVisionLabelImage($newImage->id)
+                ])->dispatch($newImage->id);
             }
             File::deleteDirectory(storage_path('/app/livewire-tmp'));
 
