@@ -11,7 +11,7 @@
           CONSIGLIACI UN IMMOBILE
         </div>
 
-        <div class="col-lg-6 login-form">
+        <div class="col-lg-12 login-form">
           <div class="col-lg-12 login-form">
             <form wire:submit.prevent="store">
               <div class="form-group">
