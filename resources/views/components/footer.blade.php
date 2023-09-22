@@ -9,60 +9,7 @@
             <a class="footer-logo-link" href="#">
               <span class="hidden-link-text">LOGO</span>
               <img src="https://cdn.discordapp.com/attachments/1151071500313575554/1153670912365838416/image.png" alt="logo" width="250" height="250">
-
             </a>
-          </div>
-         
-        </div>
-        <div class="footer-content-column">
-          <div class="footer-menu">
-            <h2 class="footer-menu-name"> Company</h2>
-            <ul id="menu-company" class="footer-menu-list">
-              <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                <a href="#">Contact</a>
-              </li>
-              <li class="menu-item menu-item-type-taxonomy menu-item-object-category">
-                <a href="#">News</a>
-              </li>
-              <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                <a href="#">Careers</a>
-              </li>
-            </ul>
-          </div>
-          <div class="footer-menu">
-            <h2 class="footer-menu-name"> Legal</h2>
-            <ul id="menu-legal" class="footer-menu-list">
-              <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-170434">
-                <a href="#">Privacy Notice</a>
-              </li>
-              <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                <a href="#">Terms of Use</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="footer-content-column">
-          <div class="footer-menu">
-            <h2 class="footer-menu-name"> Quick Links</h2>
-            <ul id="menu-quick-links" class="footer-menu-list">
-              <li class="menu-item menu-item-type-custom menu-item-object-custom">
-                <a target="_blank" rel="noopener noreferrer" href="#">Support Center</a>
-              </li>
-              <li class="menu-item menu-item-type-custom menu-item-object-custom">
-                <a target="_blank" rel="noopener noreferrer" href="#">Service Status</a>
-              </li>
-              <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                <a href="#">Security</a>
-              </li>
-              <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                <a href="#">Blog</a>
-              </li>
-              <li class="menu-item menu-item-type-post_type_archive menu-item-object-customer">
-                <a href="#">Customers</a></li>
-              <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                <a href="#">Reviews</a>
-              </li>
-            </ul>
           </div>
         </div>
         <div class="footer-content-column">

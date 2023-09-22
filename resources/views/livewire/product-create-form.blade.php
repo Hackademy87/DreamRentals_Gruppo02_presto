@@ -9,12 +9,12 @@
     <div class="row">
       <div class="col-lg-3 col-md-2"></div>
       <div class="col-lg-6 col-md-8 my-5 login-box">
-        
+
         <div class="col-lg-12 login-title">
           CONSIGLIACI UN IMMOBILE
         </div>
 
-        <div class="col-lg-12 login-form">
+        <div class="col-lg-6 login-form">
           <div class="col-lg-12 login-form">
             <form wire:submit.prevent="store">
               <div class="form-group">
