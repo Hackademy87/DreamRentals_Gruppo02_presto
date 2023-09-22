@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="row">
+    <div class="row  position-relative ">
         <div class="col-5">
 
             <div class="card">
@@ -8,14 +8,14 @@
                     <div class="card-front">
                         <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                             @if(count($product->images)>0)
-                            <div class="carousel-inner">
-                                @foreach ($product->images as $image)
+                                <div class="carousel-inner">
+                                 @foreach ($product->images as $image)
 
-                                <div class="carousel-item @if($loop->first)active @endif">
-                                    <img src="{{!$image->get()->isEmpty() ? $image->getUrl(390 , 490) : '/public/default.jpg'}}" class="d-block w-100" alt="...">
-                                </div>
+                                    <div class="carousel-item @if($loop->first)active @endif">
+                                        <img src="{{!$image->get()->isEmpty() ? $image->getUrl(390 , 490) : '/public/default.jpg'}}" class="d-block w-100" alt="...">
+                                    </div>
                                 @endforeach
-                            </div>
+                                </div>
                             @endif
                         </div>
                     </div>
@@ -23,11 +23,11 @@
                     <div class="card-back">
                         <h3 class="card-title">{{$product->name}}</h3>
                         @if($product->category)
-                        <a href="{{ route('product.bycategory', $product->category) }}">
-                            <p>{{ $product->category->name }}</p>
-                        </a>
+                            <a href="{{ route('product.bycategory', $product->category) }}">
+                                <p>{{ $product->category->name }}</p>
+                            </a>
                         @else
-                        <p>Senza Categoria</p>
+                            <p>Senza Categoria</p>
                         @endif
                         <p class="card-text text-truncate col-9">{!!$product->description!!}</p>
 
@@ -43,21 +43,34 @@
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="row wrap">
+        <div class="col-6 google">
+        <table class="table">
+            <thead>
+                <tr>
+                <th scope="col">#</th>
+                <th scope="col">Adulti</th>
+                <th scope="col">Medical</th>
+                <th scope="col">Satira</th>
+                <th scope="col">Violenza</th>
+                <th scope="col">Razzismo</th>
+                </tr>
+            </thead>
+            <tbody>
                 @foreach($product->images as $image)
-                <div class="col-12">
-                    <h5 class="tc-accent">Revisioni immagini</h5>
-                    <p>Adulti: <span class="{{$image->adult}}"></span></p>
-                    <p>Medical: <span class="{{$image->medical}}"></span></p>
-                    <p>Spoof: <span class="{{$image->spoof}}"></span></p>
-                    <p>Violence: <span class="{{$image->violence}}"></span></p>
-                    <p>Racy: <span class="{{$image->racy}}"></span></p>
-                </div>
+                    <tr>
+                        <th scope="row"></th>
+                        <td class="text-center"><p><span class="{{$image->adult}}"></span></p></td>
+                        <td class="text-center"><p><span class="{{$image->medical}}"></span></p></td>
+                        <td class="text-center"><p><span class="{{$image->spoof}}"></span></p></td>
+                        <td class="text-center"><p><span class="{{$image->violence}}"></span></p></td>
+                        <td class="text-center"><p><span class="{{$image->racy}}"></span></p></td>
+                    </tr>
                 @endforeach
-            </div>
+            </tbody>
+        </table>
         </div>
     </div>
+
 </div>
 
 

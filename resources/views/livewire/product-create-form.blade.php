@@ -9,9 +9,7 @@
     <div class="row">
       <div class="col-lg-3 col-md-2"></div>
       <div class="col-lg-6 col-md-8 my-5 login-box">
-        <div class="col-lg-12 login-key">
-          <i class="fa fa-key" aria-hidden="true"></i>
-        </div>
+        
         <div class="col-lg-12 login-title">
           CONSIGLIACI UN IMMOBILE
         </div>

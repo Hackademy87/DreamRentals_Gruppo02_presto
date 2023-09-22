@@ -18,7 +18,7 @@ a{
   .card-inner {
     width: 100%;
     height: 100%;
-    position: relative;
+    /* position: relative; */
     transform-style: preserve-3d;
     transition: transform 0.999s;
   }
@@ -30,6 +30,7 @@ a{
   .card-front,
   .card-back {
     position: absolute;
+    left: 0;
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
@@ -111,5 +112,11 @@ background: linear-gradient(347deg, rgba(149,221,212,1) 0%, rgba(149,221,212,0.8
     transition: background-color 0.3s ease-in-out; /* Aggiungi una transizione al cambio di sfondo */
 }
 
+
+.google{
+  position:absolute;
+  top:30%;
+  right:220%;
+}
 
 
