@@ -48,6 +48,18 @@
         </li>
 
         <li class="nav-item dropdown">
+            <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            LUOGHI
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              @foreach($productPlaces as $place)
+                <a class="dropdown-item" href="{{route('product.byplace',compact('place'))}}">{{$place->name}}</a>
+              @endforeach
+            </ul>
+          </li>
+
+
+        <li class="nav-item dropdown">
           <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             <span class="material-symbols-outlined">
               translate

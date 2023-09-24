@@ -4,7 +4,7 @@
       <div class="col-3 position-absolute gif">
         <img src="/casa.gif" alt="Descrizione della GIF" class="gif-image">
       </div>
-     
+
       <div class="col-lg-6 col-md-8 my-5 login-box">
 
         <div class="col-lg-12 login-title">
@@ -34,6 +34,17 @@
                   <option value="{{$category->id}}">{{$category->name}}</option>
                   @endforeach
                 </select>
+
+
+                <div class="form-group">
+                    <label class="form-control-label">LOCALITà</label>
+                    <select class="form-control" wire:model.blur="place_id">
+                      <option value="null" disabled>seleziona una località</option>
+                      @foreach($productPlaces as $place)
+                      <option value="{{$place->id}}">{{$place->name}}</option>
+                      @endforeach
+                    </select>
+
 
                 <div class="form-group">
                   <label class="form-control-label">PREZZO</label>

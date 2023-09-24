@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Models\User;
 use App\Models\Image;
+use App\Models\Place;
 use App\Models\Profile;
 use App\Models\Category;
 use Laravel\Scout\Searchable;
@@ -14,18 +15,19 @@ class Product extends Model
 {
     use HasFactory, Searchable;
 
-    protected $fillable = ['name','price','description','category','category_id', 'profile_id', 'user_id'];
+    protected $fillable = ['name','price','description','category','category_id', 'profile_id', 'user_id','place','place_id'];
 
 
 
     public function toSearchableArray():array{
-
+            $place = $this->place;
             $category = $this->category;
             $array =[
                 'id'=> $this->id,
                 'name'=> $this->name,
                 'description'=>$this->description,
                 "category"=> $category,
+                "place"=> $place
             ];
             return $array;
         }
@@ -35,6 +37,11 @@ class Product extends Model
 
     return $this->belongsTo(Category::class);
     }
+
+    public function place(){
+
+        return $this->belongsTo(Place::class);
+        }
 
     public function profile(){
         return $this->belongsTo(Profile::class);

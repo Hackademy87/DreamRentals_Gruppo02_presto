@@ -30,6 +30,7 @@ class ProductCreateForm extends Component
     public $description;
     public $images;
     public $temporary_images;
+    public $place_id;
 
 
     protected $rules=[
@@ -38,7 +39,8 @@ class ProductCreateForm extends Component
         'description'=>'required|min:5',
         'category_id' => 'required',
         'images.*'=> 'image|max:1024',
-        'temporary_images.*'=> 'image|max:1024'
+        'temporary_images.*'=> 'image|max:1024',
+        'place_id'=>'required'
     ];
 
     protected $messages=[
@@ -51,6 +53,7 @@ class ProductCreateForm extends Component
         'temporary_max.*.max' => "L\' immagine dev\' essere massimo di 1mb",
         'images.image' =>"L\' immagine dev\' essere un\' immagine",
         'image.max' =>"L\' immagine dev\' essere massimo di 1mb",
+        'place.required'=>'Il luogo non è stato selezionato'
 
     ];
 
@@ -79,6 +82,7 @@ class ProductCreateForm extends Component
             'category_id'=>$this->category_id,
             'description'=>$this->description,
             'user_id'=>$this->user_id,
+            'place_id'=>$this->place_id
         ]);
 
         if(count($this->images)){

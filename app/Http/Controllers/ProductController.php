@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Place;
 use App\Models\Product;
 use App\Models\Category;
 use Illuminate\Http\Request;
@@ -31,6 +32,7 @@ class ProductController extends Controller
      */
     public function create(Request $request)
     {
+        $places = Place::all();
         $categories = Category::all();
         return view('product.create');
         // return redirect()->route('product.create')->with('message', 'Prodotto aggiunto con successo.');
@@ -92,6 +94,19 @@ class ProductController extends Controller
 
     }
 
+    public function byPlace(Place $place){
+
+        return view('product.byplace', compact('place'));
+
+    }
+
+    public function indexByPlace(Place $place){
+
+        $products = $place->products;
+
+     return view('product.località',compact('products'));
+
+    }
 
 
 

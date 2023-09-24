@@ -30,6 +30,10 @@ Route::get('/product/categorie/{category}',[ProductController::class,'indexByCat
 
 Route::get('/product/index',[ProductController::class,'index'])->name('product.index');
 
+Route::get('/product/byPlace/{place}', [ProductController::class, 'byPlace'])->name('product.byplace');
+
+Route::get('product/località/{place}',[ProductController::class,'indexByCategory'])->name('product.località');
+
 
 
 // EMAIL

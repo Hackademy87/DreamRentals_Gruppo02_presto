@@ -32,6 +32,18 @@
             @else
                 <p>Senza Categoria</p>
             @endif
+
+
+            @if($product->place)
+            <a href="{{ route('product.byplace', $product->place) }}">
+                <p>{{ $product->place->name }}</p>
+            </a>
+        @else
+            <p>Senza Località</p>
+        @endif
+
+
+
             <p class="card-text text-truncate col-9">{!!$product->description!!}</p>
 
             <p class="card-text">Creato da : {{$product->user->name}}</p>

@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\Place;
 use App\Models\Product;
 use App\Models\Category;
 use Illuminate\Pagination\Paginator;
@@ -28,6 +29,13 @@ class AppServiceProvider extends ServiceProvider
             $productCategories = Category::all();
             View::share(compact('productCategories'));
         }
+
+
+        if (Schema::hasTable('places')) {
+            $productPlaces = Place::all();
+            View::share(compact('productPlaces'));
+        }
+
 
         if (Schema::hasTable('products')) {
             $products = Product::all();
