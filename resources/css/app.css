@@ -9,6 +9,7 @@
 @import './buttons.css';
 @import './presentazione.css';
 @import './product-form-create.css';
+@import './contact.css';
 
 :root{
     ---ColorPrimary:rgba(0, 126, 167, 0.829);
