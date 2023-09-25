@@ -51,7 +51,7 @@
             <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 {{__('ui.regioni')}}
             </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <ul class="dropdown-menu" style="height: 200px; overflow-y:scroll;" aria-labelledby="navbarDropdownMenuLink">
               @foreach($productPlaces as $place)
                 <a class="dropdown-item" href="{{route('product.byplace',compact('place'))}}">{{$place->name}}</a>
               @endforeach
@@ -66,9 +66,9 @@
             </span>
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><span><x-_locale Lang="it" nation="it"/></span></li>
-            <li><span><x-_locale Lang="en" nation="gb"/></span></li>
-            <li><span><x-_locale Lang="es" nation="es"/></span></li>
+            <li class="text-center" ><span><x-_locale Lang="it" nation="it"/></span></li>
+            <li class="text-center"><span><x-_locale Lang="en" nation="gb"/></span></li>
+            <li class="text-center"><span><x-_locale Lang="es" nation="es"/></span></li>
           </ul>
         </li>
       </ul>

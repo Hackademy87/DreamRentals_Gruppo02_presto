@@ -47,7 +47,9 @@ return [
     'perCategorie'=>"Prodotti per categoria",
     'perLuoghi'=>"Prodotti per luogo",
 
-    'dettagli'=>"Dettagli annuncio"
+    'dettagli'=>"Dettagli annuncio",
+    'motivazione'=>"Motivazione",
+    'esperienza'=>"Esperienza"
 
 
     ];

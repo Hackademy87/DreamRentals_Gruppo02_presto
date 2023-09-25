@@ -13,8 +13,9 @@
     padding: 30px;
     height: auto;
     border-radius: 80px;
-
-    background:  url(https://cdn.discordapp.com/attachments/1151071500313575554/1154358998292774922/19d326_2e67bd3963294bc1be7b2310da8c2162mv2.webp);
+    
+    /* background:url(https://cdn.discordapp.com/attachments/1151071500313575554/1154358998292774922/19d326_2e67bd3963294bc1be7b2310da8c2162mv2.webp); */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.226), rgba(0, 0, 0, 0.247)), url(/public/create3.jpg);
     background-position: end;
     background-size: cover;
     background-repeat: no-repeat;
@@ -188,6 +189,54 @@ button {
     bottom:30%;
 }
 /* Stile per il bottone "Cancella" */
+
+
+/* Media query */
+
+
+@media (min-width:320px) and (max-width:700px)  {
+    .gif{
+       position: unset;
+        top: 10px;
+        left:25%
+    }
+
+    .gif-image2{
+        height: 100px;
+    }
+    .login-box{
+        position: absolute;
+        top:60px;
+        margin-right: 1px; 
+}
+
+.space{
+    height: 30vh;
+}
+}
+
+@media (min-width: 800px) and (max-width:1350px)  {
+    
+
+    .gif-image2{
+        height: 100px;
+    }
+    
+    .login-box{
+        position: absolute;
+        top: 10vh;
+        margin-right: 1px; 
+}
+.space{
+    height: 75vh;
+}
+
+.gif{
+    position: unset;
+     top: 10px;
+     left:33%
+ }
+}
 
 
 
