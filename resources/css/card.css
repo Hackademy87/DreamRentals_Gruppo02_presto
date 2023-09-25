@@ -53,14 +53,19 @@ a{
   }
 
   .card-back {
-    background: rgb(149,221,212);
-background: linear-gradient(347deg, rgba(149,221,212,1) 0%, rgba(149,221,212,0.87718837535014) 7%, rgba(149,221,212,0.87718837535014) 28%, rgba(255,255,255,0.711922268907563) 45%, rgb(149, 203, 221) 88%);
+    /* background: rgb(149,221,212);
+background: linear-gradient(347deg, rgba(149,221,212,1) 0%, rgba(149,221,212,0.87718837535014) 7%, rgba(149,221,212,0.87718837535014) 28%, rgba(255,255,255,0.711922268907563) 45%, rgb(149, 203, 221) 88%); */
+
+
+    background-image: url('https://cdn.pixabay.com/photo/2017/02/15/11/05/texture-2068283_1280.jpg');
+    background-size: cover;
+    background-position: center;
+
     color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* border: 10px solid  white; */
     border-radius: 10px;
     justify-items: center;
     font-size: 24px;
@@ -70,9 +75,7 @@ background: linear-gradient(347deg, rgba(149,221,212,1) 0%, rgba(149,221,212,0.8
 
 
   /* .card-back {
-    background-image: url('https://img.freepik.com/free-photo/close-up-pastel-blue-colored-paper-banner_23-2147981568.jpg?w=360&t=st=1695220502~exp=1695221102~hmac=3542a5258ff226cbf2a592a26e4608976da8fc89b6e89019d07bcca95ac6a55f');
-    background-size: cover;
-    background-position: center;
+
     color: #fff;
 
 } */
@@ -128,9 +131,9 @@ background: linear-gradient(347deg, rgba(149,221,212,1) 0%, rgba(149,221,212,0.8
   position:absolute;
   top:0%;
   left:160%;
-  
+
 }
- 
+
 
 
 
@@ -163,29 +166,27 @@ background: linear-gradient(347deg, rgba(149,221,212,1) 0%, rgba(149,221,212,0.8
   }
 }
 
-@media (min-width:600px) and (max-width: 800px)  { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
-  
-  /* .card{
-    width: 100px;
+@media (min-width:600px) and (max-width: 1000px)  { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+
+.card{
+    width: 300px;
     height: 400px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .img-card{
-    width: 100px;
-    height: 400px;
-    margin-left: auto;
-    margin-right: auto;
-  } */
+}
+.img-card{
+width: 300px;
+height: 400px;
+}
 
 }
 
-@media (min-width:801px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */
-  
+@media (min-width:1000px) and (max-width:1600px){
+    .card{
+        width: 300px;
+        height: 430px;
+    }
+    .img-card{
+    width: 300px;
+    height: 430px;
+    }
 }
-@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */
 
-}
-@media (min-width:800px) { /* hi-res laptops and desktops */
-
-}

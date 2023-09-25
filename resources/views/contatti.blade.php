@@ -37,9 +37,73 @@
 
 
 
+    <style>
+
+
+/* .container {
+    display: flex;
+    align-items: center;
+    background-color: black;
+    justify-content: center;
+    height: 100vh;
+} */
+
+.image {
+    flex: 1;
+    padding: 100px;
+    text-align: center;
+
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
 
 
 
+
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color:gray;
+}
+
+input[type="submit"] {
+    background-color: #007E90;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #005A64;
+}
+    </style>
 
 
     </x-layout>
