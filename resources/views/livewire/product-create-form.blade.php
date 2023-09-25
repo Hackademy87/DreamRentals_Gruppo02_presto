@@ -37,7 +37,7 @@
 
 
                 <div class="form-group">
-                    <label class="form-control-label">LOCALITà</label>
+                    <label class="form-control-label">REGIONI</label>
                     <select class="form-control" wire:model.blur="place_id">
                       <option value="null" disabled>seleziona una località</option>
                       @foreach($productPlaces as $place)

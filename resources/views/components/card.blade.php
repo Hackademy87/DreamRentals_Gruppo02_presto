@@ -5,9 +5,10 @@
 
 
 
-<div class="card">
-  <div class="card-inner">
 
+<div class="card">
+
+  <div class="card-inner">
         <div class="card-front">
             <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                 @if(count($product->images)>0)
@@ -55,7 +56,8 @@
             </div>
             <a href="{{route('product.show' , $product)}}" class="mt-5 button-custom btn ">Dettagli</a>
         </div>
-  </div>
+
+    </div>
 </div>
 
 

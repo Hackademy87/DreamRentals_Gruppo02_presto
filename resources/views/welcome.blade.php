@@ -30,6 +30,8 @@
 
 <div class="panel1">
     <div class="container">
+        <div class="row ">
+            <div class="col-12">
       <p class="watch intro fade-in" >We Are</p>
       <h1 class="dream" style="color:orange" class="watch fade-in title-bg">Dream Rentals</h1>
       <p class="watch intro fade-in" >Luxury real estate site</p>
@@ -43,6 +45,9 @@
 
 
       <img src="/casa.gif" alt="" class="gif-image fade-inImg watch">
+
+    </div>
+    </div>
     </div>
     </div>
 

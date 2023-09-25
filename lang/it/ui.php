@@ -23,6 +23,7 @@ return [
         'lavora'=>"Lavora Con Noi",
         'categorie'=>"Categorie",
         'servizi'=>"Servizi",
+        'regioni'=>"Regions",
 
     //Create-Form//
 
@@ -42,6 +43,9 @@ return [
     'palazzo'=>"Palazzo",
     'residence'=>"Residenza",
     'complesso'=>"Complesso",
-    'casa vacanze'=>"Casa Vacanze"
+    'casa vacanze'=>"Casa Vacanze",
+
+
+
 
     ];
