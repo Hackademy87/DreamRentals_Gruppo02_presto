@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row  position-relative justify-content-center">
-        <div class="col-12 col-lg-5">
+        <div class="col-12 ">
 
             <div class="card">
                 <div class="card-inner">

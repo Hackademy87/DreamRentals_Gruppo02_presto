@@ -63,7 +63,7 @@
                             <td>{{$product_to_check->category->name}}</td>
                             <td>{{$product_to_check->place->name}}</td>
 
-                            
+
                             <td class="annulla">
 
                                 <form method="POST" action="{{ route('revisor.reverse', $product_to_check) }}">
@@ -78,23 +78,9 @@
                                 </form>
                                 @endif
                             </td>
-                            
+
                         </tr>
-                        <tr class="annullaTel">
-                            <td>
-                            <form method="POST" action="{{ route('revisor.reverse', $product_to_check) }}">
-                                @csrf
-                                <button class="btn button-custom" type="submit">Annulla</button>
-                            </form>
-                            @if ($product_to_check->is_accepted == false)
-                            <form method="POST" action="{{ route('revisor.delete', $product_to_check) }}">
-                                @method('DELETE')
-                                @csrf
-                                <button class="btn button-customReject ms-1" type="submit">ELIMINA</button>
-                            </form>
-                            @endif
-                        </td>
-                        </tr>
+
                         @endforeach
 
                     </tbody>
