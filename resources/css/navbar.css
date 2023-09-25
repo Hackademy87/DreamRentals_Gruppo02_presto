@@ -58,7 +58,7 @@ font-size: 17px;
 .btn-register {
 
     background-color: gray;
-  color: white;
+    color: white;
       margin-left: 10px;
       text-align: center;
 
@@ -124,7 +124,7 @@ padding: 5px;
 
 .line {
   fill: none;
-  stroke: white;
+  stroke: rgb(0, 109, 145);
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 3;
@@ -166,7 +166,7 @@ padding: 5px;
 }
 
 .close{
-  color: rgb(250, 250, 250);
+  color: rgba(9, 61, 78, 0.829);
   font-size: 30px;
 
 }
