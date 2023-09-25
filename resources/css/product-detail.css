@@ -1,0 +1,36 @@
+.vh50{
+    min-height: 50vh;
+}
+
+.product-details {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.product-details td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.product-details tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.product-details tr:hover {
+    background-color: #ddd;
+}
+
+.product-details td:first-child {
+    font-weight: bold;
+}
+
+.product-details td:last-child {
+    text-align: right;
+}
+
+.product-text{
+    padding-left: 60px;
+    padding-right: 60px;
+}
