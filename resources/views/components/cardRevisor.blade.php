@@ -1,6 +1,6 @@
 <div class="container">
-    <div class="row  position-relative ">
-        <div class="col-5">
+    <div class="row  position-relative justify-content-center">
+        <div class="col-12 col-lg-5">
 
             <div class="card">
                 <div class="card-inner">
@@ -44,7 +44,7 @@
             </div>
         </div>
        
-        <div class="col-6 google">
+        <div class="col-lg-6 col-12 google">
         <table class="table">
             <thead>
                 <tr>
@@ -70,7 +70,7 @@
             </tbody>
         </table>
         </div>
-        <div class="col-8 google2 d-flex"> 
+        <div class="col-lg-8 col-12 google2 d-flex"> 
             @foreach($product->images as $image)
         <table class="mx-3 table">
            

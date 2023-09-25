@@ -84,7 +84,7 @@
                                 <h2>Senza Luogo</h2>
                                 @endif
                             </td>
-                            <td>{{$product->price}}</td>
+                            <td>{{$product->price}}€</td>
                         </tr>
                     </tbody>
                 </table>
@@ -96,10 +96,13 @@
                     <p class=" text-center">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. In doloremque necessitatibus, beatae quibusdam, dolorem ipsam aliquam vitae soluta officiis, veritatis vel! Ratione commodi labore, exercitationem ex laborum repellat voluptatum quis! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati et asperiores iste. Quia, sint, vitae, debitis aspernatur delectus optio accusamus harum hic facilis sit quidem perspiciatis nihil natus minus rerum.
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus dicta sed accusamus explicabo vel, deleniti fugiat rerum animi harum asperiores amet est unde eius architecto, voluptatum doloribus. Officia, ipsam similique.
-        
+
                     </p>
+                   
                 </div>
+                
             </div>
+            
 
 
 
