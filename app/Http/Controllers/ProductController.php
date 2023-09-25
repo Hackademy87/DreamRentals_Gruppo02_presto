@@ -96,7 +96,7 @@ class ProductController extends Controller
 
     public function byPlace(Place $place){
 
-        return view('product.byplace', compact('place'));
+        return view('product.byPlace', compact('place'));
 
     }
 

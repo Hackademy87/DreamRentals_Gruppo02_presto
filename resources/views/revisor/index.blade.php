@@ -1,9 +1,7 @@
 <x-layout>
 
     <div class="container vh50 my-4">
-        <div class="row">
-            <h4>Tutti gli utenti</h4>
-        </div>
+
         <div class="row">
             <div class="col-12">
                 <h3>{{$product_to_check ? 'ecco l annuncio da revisionare':'Non ci sono annunci da revisionare'}}</h3>
@@ -50,19 +48,19 @@
                 <table class="table">
                     <thead>
                         <tr>
-                            <th scope="col">Nome</th>
-                            <!-- <th scope="col">Descrizione</th> -->
-                            <th scope="col">Prezzo</th>
-                            <th scope="col">Categoria</th>
+                            <th scope="col">{{__('ui.nome')}}</th>
+                            <th scope="col">{{__('ui.prezzo')}}</th>
+                            <th scope="col">{{__('ui.categoria')}}</th>
+                            <th scope="col">{{__('ui.regione')}}</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach ($product_is_revisioned as $product_to_check)
                         <tr>
                             <th scope="row">{{$product_to_check->name}}</th>
-                            <!-- <td class="text-truncate">{{$product_to_check->description}}</td> -->
                             <td>{{$product_to_check->price}}</td>
                             <td>{{$product_to_check->category->name}}</td>
+                            <td>{{$product_to_check->place->name}}</td>
 
 
                             <td>

@@ -47,6 +47,7 @@ return [
     'perCategorie'=>"Prodotti per categoria",
     'perLuoghi'=>"Prodotti per luogo",
 
+    'dettagli'=>"Dettagli annuncio"
 
 
     ];

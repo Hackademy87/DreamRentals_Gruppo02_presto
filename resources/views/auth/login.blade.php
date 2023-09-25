@@ -1,7 +1,7 @@
 <x-layout>
 
 
-
+    <video class="video-bg " src="pittura.mp4" autoplay muted loop></video>
 <div class="container my-5">
     <div class="row justify-content-center align-items-center">
 
@@ -35,7 +35,7 @@
         <a class="signup-link link" href="{{route('register')}}"> Sign up now</a>
       </p>
 </form>
-  
+
 
 
 </div>
