@@ -2,7 +2,7 @@
 
     <div class="row position-relative justify-content-center">
       <div class="col-3 position-absolute gif">
-        <img src="/casa.gif" alt="Descrizione della GIF" class="gif-image">
+        <img src="/casa.gif" alt="Descrizione della GIF" class="gif-image2">
       </div>
 
       <div class="col-lg-6 col-md-8 my-5 login-box">
