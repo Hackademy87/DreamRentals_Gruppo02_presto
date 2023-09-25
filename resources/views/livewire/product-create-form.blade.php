@@ -2,32 +2,32 @@
 
     <div class="row position-relative justify-content-center">
       <div class="col-3 position-absolute gif">
-        <img src="/casa.gif" alt="Descrizione della GIF" class="gif-image">
+        <img src="/casa.gif" alt="Descrizione della GIF" class="gif-image2">
       </div>
 
       <div class="col-lg-6 col-md-8 my-5 login-box">
 
         <div class="col-lg-12 login-title">
-          CONSIGLIACI UN IMMOBILE
+            {{__('ui.consiglia')}}
         </div>
 
         <div class="col-lg-12 login-form">
           <div class="col-lg-12 login-form">
             <form wire:submit.prevent="store">
               <div class="form-group">
-                <label class="form-control-label">NOME</label>
+                <label class="form-control-label">{{__('ui.nome')}}</label>
                 <input type="text" class="form-control" wire:model.blur="name">
                 <div class="text-danger">@error('name') {{ $message }} @enderror</div>
               </div>
 
               <div class="form-group">
-                <label class="form-control-label">DESCRIZIONE</label>
+                <label class="form-control-label">{{__('ui.descrizione')}}</label>
                 <input type="text" class="form-control" wire:model.blur="description">
                 <div class="text-danger">@error('description') {{ $message }} @enderror</div>
               </div>
 
               <div class="form-group">
-                <label class="form-control-label">CATEGORIA</label>
+                <label class="form-control-label">{{__('ui.categoria')}}</label>
                 <select class="form-control" wire:model.blur="category_id">
                   <option value="null" disabled>seleziona una categoria</option>
                   @foreach($productCategories as $category)
@@ -37,7 +37,7 @@
 
 
                 <div class="form-group">
-                    <label class="form-control-label">REGIONI</label>
+                    <label class="form-control-label">{{__('ui.regione')}}</label>
                     <select class="form-control" wire:model.blur="place_id">
                       <option value="null" disabled>seleziona una località</option>
                       @foreach($productPlaces as $place)
@@ -47,13 +47,13 @@
 
 
                 <div class="form-group">
-                  <label class="form-control-label">PREZZO</label>
+                  <label class="form-control-label">{{__('ui.prezzo')}}</label>
                   <input type="prezzo" class="form-control" wire:model.blur="price">
                   <div class="text-danger">@error('price') {{ $message }} @enderror</div>
                 </div>
                 <div class="form--group">
 
-                  <label class="form-control-label">COPERTINA</label>
+                  <label class="form-control-label">{{__('ui.copertina')}}</label>
                   <input wire:model='temporary_images' type="file" name="images" multiple class="form-controll shadow @error ('temporary_images.*') is-invalid @enderror" placeholder="image">
                   @error('temporary_images.*')
                   <p class="text-danger mt-2">{{$message}}</p>

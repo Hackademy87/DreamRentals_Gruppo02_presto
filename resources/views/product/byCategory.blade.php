@@ -5,9 +5,7 @@
         <div class="row">
 
             <div class="col-12">
-
-                <h2>Prodotti per categoria {{ $category->name }}</h2>
-
+                <h2>{{__('ui.perCategorie')}} {{__("ui.$category->name")}}</h2>
             </div>
 
         </div>

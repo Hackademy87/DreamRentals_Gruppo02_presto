@@ -23,13 +23,17 @@ font-size: 17px;
 }
 
 .nav-link{
-  color: #fff;
+  color: rgba(9, 61, 78, 0.829);
+  font-weight: bold;
 }
 
 .navbar {
-  background-color: var(---ColorPrimary);
+  background-color: rgba(127, 255, 212, 0);
   padding: 10px;
   display: flex;
+  transition: 0.6s;
+  border-bottom:1px solid rgba(0, 126, 167, 0.829);
+  padding-bottom: 0px;
 
 }
 
@@ -173,3 +177,12 @@ padding: 5px;
 }
 
 
+.white-color {
+    color:white ;
+    font-size: 20px;
+
+}
+.white-color:hover{
+    color: rgba(0, 126, 167, 0.829);
+    text-decoration: underline;
+}

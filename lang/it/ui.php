@@ -23,7 +23,7 @@ return [
         'lavora'=>"Lavora Con Noi",
         'categorie'=>"Categorie",
         'servizi'=>"Servizi",
-        'regioni'=>"Regions",
+        'regioni'=>"Regioni",
 
     //Create-Form//
 
@@ -35,16 +35,17 @@ return [
     'copertina'=>"Copertina",
     'cancImg'=>"Cancella",
     'crea'=>"crea",
+    'regione'=>"Regione",
 
     //Categorie//
-
     'appartamento'=>"Appartamento",
     'villa'=>"Villa",
     'palazzo'=>"Palazzo",
     'residence'=>"Residenza",
     'complesso'=>"Complesso",
     'casa vacanze'=>"Casa Vacanze",
-
+    'perCategorie'=>"Prodotti per categoria",
+    'perLuoghi'=>"Prodotti per luogo",
 
 
 
