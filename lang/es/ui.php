@@ -49,8 +49,9 @@ return [
  'perLuoghi'=>"productos por ubicación",
 
 
- 'dettagli'=>"detalles del anuncio"
-
+ 'dettagli'=>"detalles del anuncio",
+ 'motivazione'=>"motivación",
+ 'esperienza'=>"experiencia"
 
  ];
 
