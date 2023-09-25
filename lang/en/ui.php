@@ -51,6 +51,8 @@ return [
  'perCategorie'=>"products by category",
  'perLuoghi'=>"products by location",
 
- 'dettagli'=>"Announcement details"
+ 'dettagli'=>"Announcement details",
+ 'motivazione'=>"Motivation",
+ 'esperienza'=>"Experience"
 ];
 
