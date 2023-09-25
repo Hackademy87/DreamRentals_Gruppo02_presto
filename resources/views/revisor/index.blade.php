@@ -54,6 +54,7 @@
                             <!-- <th scope="col">Descrizione</th> -->
                             <th scope="col">Prezzo</th>
                             <th scope="col">Categoria</th>
+                            <th scope="col"></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -75,7 +76,7 @@
                                 <form method="POST" action="{{ route('revisor.delete', $product_to_check) }}">
                                     @method('DELETE')
                                     @csrf
-                                    <button class="btn button-customReject" type="submit">ELIMINA</button>
+                                    <button class="btn button-customReject ms-1" type="submit">ELIMINA</button>
                                 </form>
                                 @endif
                             </td>

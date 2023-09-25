@@ -25,7 +25,7 @@
 
 
 
-            <table class="product-details ">
+            <table class="product-details mt-3">
                 <tr>
                     <td>Nome:</td>
                     <td class="text-start">{{$product->name}}</td>
