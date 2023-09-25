@@ -107,7 +107,8 @@ background: linear-gradient(347deg, rgba(149,221,212,1) 0%, rgba(149,221,212,0.8
 }
 
 .card-back a {
-    color: #ff6600; /* Cambia il colore del link */
+    color: #b4900e;
+    font-weight: bold; /* Cambia il colore del link */
     /* ... altre proprietà CSS ... */
 }
 
@@ -140,7 +141,8 @@ background: linear-gradient(347deg, rgba(149,221,212,1) 0%, rgba(149,221,212,0.8
 
 /* MEDIA QUERY */
 
-@media (min-width:320px) and (max-width:479px)  { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+
+@media (min-width:320px) and (max-width:479px)  {
   .card{
     width: 360px;
     height: 490px;
@@ -170,7 +172,7 @@ background: linear-gradient(347deg, rgba(149,221,212,1) 0%, rgba(149,221,212,0.8
 
 }
 
-@media (min-width:480px) and (max-width:599px)  { /* smartphones, Android phones, landscape iPhone */
+@media (min-width:480px) and (max-width:599px)  {
   .card{
     width: 300px;
     height: 490px;
@@ -183,7 +185,7 @@ background: linear-gradient(347deg, rgba(149,221,212,1) 0%, rgba(149,221,212,0.8
   }
 }
 
-@media (min-width:600px) and (max-width: 1000px)  { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+@media (min-width:600px) and (max-width: 1000px)  {
 
 .card{
     width: 300px;
@@ -198,12 +200,12 @@ height: 400px;
 
 @media (min-width:1000px) and (max-width:1600px){
     .card{
-        width: 300px;
-        height: 430px;
+        width: 350px;
+        height: 470px;
     }
     .img-card{
-    width: 300px;
-    height: 430px;
+    width: 350px;
+    height: 470px;
     }
 }
 
