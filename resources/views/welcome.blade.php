@@ -12,7 +12,7 @@
 
       @foreach($products as $product)
 
-        <div class="col-12 col-md-3 pb-5 ">
+        <div class="col-12 col-md-6 col-lg-3 pb-5 ">
 
         <x-card :Product='$product'></x-card>
 

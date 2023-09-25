@@ -1,9 +1,7 @@
 <x-layout>
 
     <div class="container vh50 my-4">
-        <div class="row">
-            <h4>Tutti gli utenti</h4>
-        </div>
+
         <div class="row">
             <div class="col-12">
                 <h3>{{$product_to_check ? 'ecco l annuncio da revisionare':'Non ci sono annunci da revisionare'}}</h3>
@@ -60,9 +58,9 @@
                         @foreach ($product_is_revisioned as $product_to_check)
                         <tr>
                             <th scope="row">{{$product_to_check->name}}</th>
-                            <!-- <td class="text-truncate">{{$product_to_check->description}}</td> -->
                             <td>{{$product_to_check->price}}</td>
                             <td>{{$product_to_check->category->name}}</td>
+                            <td>{{$product_to_check->place->name}}</td>
 
 
                             <td>
@@ -75,7 +73,7 @@
                                 <form method="POST" action="{{ route('revisor.delete', $product_to_check) }}">
                                     @method('DELETE')
                                     @csrf
-                                    <button class="btn button-customReject" type="submit">ELIMINA</button>
+                                    <button class="btn button-customReject ms-1" type="submit">ELIMINA</button>
                                 </form>
                                 @endif
                             </td>

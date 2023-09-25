@@ -14,8 +14,8 @@
         </li>
         @auth
           @if (Auth::user()->is_revisor)
-            <li class="pt-2 px-2">
-              <a class=" pt-2 position-relative text-decoration-none" href="{{route('revisor.index')}}">{{__('ui.zonaRevisore')}}
+            <li class=" px-2">
+              <a class="  position-relative text-decoration-none nav-link" href="{{route('revisor.index')}}">{{__('ui.zonaRevisore')}}
                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{{App\Models\Product::toBeRevisionedCount()}}
                 <span class="visually-hidden">Messaggi non letti</span>
                 </span>
