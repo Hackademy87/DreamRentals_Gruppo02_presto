@@ -1,10 +1,10 @@
 <x-layout>
 
 
-
+    <video class="video-bg " src="pittura.mp4" autoplay muted loop></video>
 <div class="container my-5">
     <div class="row justify-content-center">
-    
+
 
 @if($errors->any())
 @foreach ($errors->all() as $error)

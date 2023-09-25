@@ -49,7 +49,8 @@ return [
  'complesso'=>"Complex",
  'casa vacanze'=>"Vacation Home",
  'perCategorie'=>"products by category",
- 'perLuoghi'=>"products by location"
+ 'perLuoghi'=>"products by location",
 
+ 'dettagli'=>"Announcement details"
 ];
 
