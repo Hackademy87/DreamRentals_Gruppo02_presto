@@ -8,7 +8,9 @@
 @import './footer.css';
 @import './buttons.css';
 @import './presentazione.css';
+@import './product-detail.css';
 @import './product-form-create.css';
+@import './contact.css';
 
 :root{
     ---ColorPrimary:rgba(0, 126, 167, 0.829);
@@ -26,40 +28,7 @@ a{
 }
 
 
-.vh50{
-    min-height: 50vh;
-}
 
-
-
-.product-details {
-    border-collapse: collapse;
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-}
-
-.product-details td {
-    padding: 10px;
-    border: 1px solid #ddd;
-    text-align: left;
-}
-
-.product-details tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-.product-details tr:hover {
-    background-color: #ddd;
-}
-
-.product-details td:first-child {
-    font-weight: bold;
-}
-
-.product-details td:last-child {
-    text-align: right;
-}
 
 
 

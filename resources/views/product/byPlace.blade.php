@@ -7,7 +7,7 @@
             <div class="col-12">
 
                 <h2>{{__('ui.perLuoghi')}} {{ $place->name }}</h2>
-                <img width="80px" src="/earth.gif" alt="">
+                <img class="mb-5" width="80px" src="/earth.gif" alt="">
             </div>
 
         </div>
@@ -25,7 +25,7 @@
             @endforeach
 
         </div>
-
+        
     </div>
 
 </x-layout>

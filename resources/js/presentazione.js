@@ -1,6 +1,6 @@
     //? PRESENTAZIONE
 
-    const lollo = document.querySelector(".sec-text");
+    const text = document.querySelector(".sec-text");
     const textLoad = () => {
       setTimeout(() => {
         lollo.textContent = "The Difference";

@@ -57,13 +57,13 @@ font-size: 17px;
 
 .btn-register {
 
-    background-color: gray;
-    color: white;
-      margin-left: 10px;
-      text-align: center;
+  background-color: gray;
+  color: white;
+  margin-left: 10px;
+  text-align: center;
 
-      position: absolute;
-      right: 240px;
+  position: absolute;
+  right: 240px;
 }
 
 .InputContainer {

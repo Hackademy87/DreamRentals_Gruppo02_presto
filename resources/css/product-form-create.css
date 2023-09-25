@@ -210,9 +210,7 @@ button {
         margin-right: 1px; 
 }
 
-.space{
-    height: 30vh;
-}
+
 }
 
 @media (min-width: 800px) and (max-width:1350px)  {
@@ -227,15 +225,13 @@ button {
         top: 10vh;
         margin-right: 1px; 
 }
-.space{
-    height: 75vh;
-}
 
-.gif{
+
+/* .gif{
     position: unset;
      top: 10px;
      left:33%
- }
+ } */
 }
 
 

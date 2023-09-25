@@ -232,6 +232,9 @@
       text-decoration: none;
   }
 
+  .space{
+    height: 120px;
+  }
 
 
 
@@ -273,7 +276,8 @@
     position: relative;
   }
   .gif-image{
-    padding-top: 50px;
+    margin-top: 10px;
+    padding-top: 20px;
     display: flex;
     position: absolute;
     left: 20vw;
@@ -285,6 +289,7 @@
 
 
   @media (min-width:480px) and (max-width:599px)  { /* smartphones, Android phones, landscape iPhone */
+    
     .footer-content {
       margin-left: auto;
       margin-right: auto;
