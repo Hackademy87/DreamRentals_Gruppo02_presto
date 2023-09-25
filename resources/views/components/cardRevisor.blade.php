@@ -43,23 +43,12 @@
                 </div>
             </div>
         </div>
-        <div class="col-12 col-lg-6 google">
-        @foreach($product->images as $image)
-                    <h5 class="tc-accent">Tags</h5>
-                    <div class="p-2 d-flex">
-                        @if ($image->labels)
-                            @foreach ($image->labels as $label)
-                                <p class="d-inline">{{$label}}</p>
-                            @endforeach
-                        @endif
-                    </div>
-                    @endforeach
-                </div>
+       
         <div class="col-6 google">
         <table class="table">
             <thead>
                 <tr>
-                <th scope="col">#</th>
+                
                 <th scope="col">Adulti</th>
                 <th scope="col">Medical</th>
                 <th scope="col">Satira</th>
@@ -70,7 +59,7 @@
             <tbody>
                 @foreach($product->images as $image)
                     <tr>
-                        <th scope="row"></th>
+                        
                         <td class="text-center"><p><span class="{{$image->adult}}"></span></p></td>
                         <td class="text-center"><p><span class="{{$image->medical}}"></span></p></td>
                         <td class="text-center"><p><span class="{{$image->spoof}}"></span></p></td>
@@ -80,6 +69,32 @@
                 @endforeach
             </tbody>
         </table>
+        </div>
+        <div class="col-8 google2 d-flex"> 
+            @foreach($product->images as $image)
+        <table class="mx-3 table">
+           
+            <tr>
+                <th>
+                    Tags
+                </th>
+            </tr> 
+            
+           
+            @if($image->labels)
+            @foreach($image->labels as $label)
+            <tr > 
+                <td >
+                    {{$label}}
+                </td>
+            </tr>
+            
+            @endforeach
+            @endif
+           
+           
+        </table> 
+        @endforeach
         </div>
     </div>
 
