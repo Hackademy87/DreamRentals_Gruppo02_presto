@@ -26,6 +26,68 @@
 
 
 
+  <section class="sezione-abbellimento">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 style="font-weight: bold;">Benvenuti nel Nostro Mondo</h2>
+               <p>Posizione Geografica: La posizione geografica di una regione può avere un impatto significativo sul mercato immobiliare. Le regioni costiere, per esempio, possono avere una domanda elevata per le proprietà vicine al mare, mentre le regioni montuose potrebbero essere attraenti per chi cerca una casa in una zona tranquilla e panoramica.
+<br>
+              Prezzo delle Proprietà: Le regioni possono differire notevolmente per quanto riguarda i prezzi delle proprietà immobiliari. Le regioni urbane o le metropoli tendono ad avere prezzi più elevati rispetto alle regioni rurali o meno popolate. Questo può essere determinato dalla domanda e dall'offerta locali, dalla disponibilità di servizi e dalle opportunità di lavoro.
+
+</p>
+            </div>
+            <div class="col-md-6">
+                <img class="fade-inImg watch palazzo" src="https://cdn.discordapp.com/attachments/1120659852709085269/1155858106245451786/fomstock-4ojhpgKpS68-unsplash.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+<!-- INIZIO GRID -->
+<h3 class="text-center mt-5" style="font-weight: bold; font-size:35px;">Scopri la tua casa da sogno</h3>
+<header style="position: relative; z-index:99;" class='contenitoreM my-5'>
+    <div class="galleria">
+      <figure class="galleria__elemento galleria__elemento--1">
+      </figure>
+
+      <figure class="galleria__elemento galleria__elemento--2">
+      </figure>
+
+      <figure class="galleria__elemento galleria__elemento--3">
+      </figure>
+
+      <figure class="galleria__elemento galleria__elemento--4">
+      </figure>
+
+      <figure class="galleria__elemento galleria__elemento--5">
+      </figure>
+
+      <figure class="galleria__elemento galleria__elemento--6">
+      </figure>
+
+    </div>
+
+  </div>
+
+  </header>
+
+
+  <!-- FINE GRID -->
+
+
+
+
+
+
 <!-- PRESENTAZIONE -->
 
 <div class="panel1">
@@ -50,6 +112,13 @@
     </div>
   </div>
 </div>
+
+
+
+
+
+
+
 
 
 </x-layout>

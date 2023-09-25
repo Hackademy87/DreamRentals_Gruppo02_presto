@@ -1,18 +1,17 @@
     //? PRESENTAZIONE
 
-    const text = document.querySelector(".sec-text");
+    const lollo = document.querySelector(".sec-text");
     const textLoad = () => {
       setTimeout(() => {
-        text.textContent = "The Difference";
+        lollo.textContent = "The Difference";
       }, 0);
       setTimeout(() => {
-        text.textContent = "Your Future";
+        lollo.textContent = "Your Future";
       }, 4000);
       setTimeout(() => {
-        text.textContent = "Your Destination";
+        lollo.textContent = "Your Destination";
       }, 8000);
-  
     }
-  
+
     textLoad();
     setInterval(textLoad, 4000);

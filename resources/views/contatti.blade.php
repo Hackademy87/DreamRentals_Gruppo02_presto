@@ -40,13 +40,6 @@
     <style>
 
 
-/* .container {
-    display: flex;
-    align-items: center;
-    background-color: black;
-    justify-content: center;
-    height: 100vh;
-} */
 
 .image {
     flex: 1;
@@ -104,8 +97,6 @@ input[type="submit"]:hover {
     background-color: #005A64;
 }
     </style>
-
-
 
 
     </x-layout>
