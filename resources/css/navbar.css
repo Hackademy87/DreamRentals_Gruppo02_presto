@@ -124,7 +124,7 @@ padding: 5px;
 
 .line {
   fill: none;
-  stroke: white;
+  stroke: rgb(0, 109, 145);
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 3;
