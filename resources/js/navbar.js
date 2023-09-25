@@ -22,12 +22,13 @@ window.addEventListener('scroll', () => {
 
 
   if (scrollTop > 1700) {
-    navbar.style.height = '200px';
+    navbar.style.height = '150px';
     navbar.style.backgroundColor = 'rgba(127, 255, 212, 0)';
 
     navbarLinks.forEach(link => {
+
       link.style.color = 'rgba(0, 126, 167, 0.829)';
-      link.style.fontSize = '30px';
+      link.style.fontSize = '20px';
       link.addEventListener('mouseover', () => {
         link.style.color = 'white'
         link.style.textDecoration = 'underline';
@@ -37,7 +38,6 @@ window.addEventListener('scroll', () => {
         });
       });
     });
-
   }
 
   else {
@@ -49,10 +49,13 @@ window.addEventListener('scroll', () => {
       link.style.fontSize = '';
       link.removeEventListener('mouseover', null);
       link.removeEventListener('mouseout', null);
+
     });
 
   }
 });
+
+
 
 
 

@@ -49,7 +49,7 @@
 
         <li class="nav-item dropdown">
             <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            LUOGHI
+                {{__('ui.regioni')}}
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               @foreach($productPlaces as $place)

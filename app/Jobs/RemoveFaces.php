@@ -16,19 +16,19 @@ use Google\Cloud\Vision\V1\ImageAnnotatorClient;
 class RemoveFaces implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
-    
-    private $product_image_id; 
+
+    private $product_image_id;
     /**
      * Create a new job instance.
      */
     /**
      * Create a new job instance.
      */
-    public function __construct($product_image_id) { 
+    public function __construct($product_image_id) {
 
-        $this->product_image_id = $product_image_id; 
+        $this->product_image_id = $product_image_id;
 
-    } 
+    }
 
     /**
      * Execute the job.
@@ -70,10 +70,11 @@ class RemoveFaces implements ShouldQueue
                 ->watermarkHeight($h, Manipulations::UNIT_PIXELS)
                 ->watermarkFit(Manipulations::FIT_STRETCH);
 
+
             $image->save($srcPath);
         }
 
         $imageAnnotator->close();
     }
-    
+
 }
