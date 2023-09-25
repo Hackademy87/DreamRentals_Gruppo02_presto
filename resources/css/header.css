@@ -88,3 +88,15 @@ color: white;
 padding: 10px;
 text-align: center;
 }
+
+
+/* MEDIA QUERY */
+
+@media (min-width:600px) and (max-width: 800px)  { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+   /* .contenitore{
+    height: 500px;
+   } */
+  }
+  @media (min-width:801px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */
+
+  }

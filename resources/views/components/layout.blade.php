@@ -12,7 +12,8 @@
 </head>
 <body>
     <x-navbar></x-navbar>
-
+    <br>
+    <br>
     @if(session('message'))
 
         <div class="alert alert-success">{{session('message')}}</div>
