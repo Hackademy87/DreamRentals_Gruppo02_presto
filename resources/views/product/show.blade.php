@@ -24,7 +24,7 @@
 
 
 
-            <table class="product-details mt-3">
+            <!-- <table class="product-details mt-3 " >
                 <tr>
                     <td>{{__('ui.nome')}}:</td>
                     <td class="text-start">{{$product->name}}</td>
@@ -57,11 +57,49 @@
                     <td>{{__('ui.prezzo')}}:</td>
                     <td class="text-start">{{$product->price}}</td>
                 </tr>
-            </table>
+            </table> -->
 
+            <div class="col-12 col-md-4 col-lg-8">
+                <table class="table table-striped product-details mt-3 col-6">
+                    <thead>
+                        <tr>
+                            <th scope="col">{{__('ui.nome')}}:</th>
+                            <th scope="col">{{__('ui.categoria')}}:</th>
+                            <th scope="col">{{__('ui.regione')}}:</th>
+                            <th scope="col">{{__('ui.prezzo')}}:</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">{{$product->name}}</th>
+                            <td>@if($product->category)
+                                {{ $product->category->name }}
+                                @else
+                                <h2>Senza Categoria</h2>
+                                @endif
+                            </td>
+                            <td>@if($product->place)
+                                {{ $product->place->name }}
+                                @else
+                                <h2>Senza Luogo</h2>
+                                @endif
+                            </td>
+                            <td>{{$product->price}}</td>
+                        </tr>
+                    </tbody>
+                </table>
 
+                <br>
+                <div class="product-text mt-4">
 
-
+                    <h4 class="text-center"> {{__('ui.descrizione')}}:</h4>
+                    <p class=" text-center">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. In doloremque necessitatibus, beatae quibusdam, dolorem ipsam aliquam vitae soluta officiis, veritatis vel! Ratione commodi labore, exercitationem ex laborum repellat voluptatum quis! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati et asperiores iste. Quia, sint, vitae, debitis aspernatur delectus optio accusamus harum hic facilis sit quidem perspiciatis nihil natus minus rerum.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus dicta sed accusamus explicabo vel, deleniti fugiat rerum animi harum asperiores amet est unde eius architecto, voluptatum doloribus. Officia, ipsam similique.
+        
+                    </p>
+                </div>
+            </div>
 
 
 

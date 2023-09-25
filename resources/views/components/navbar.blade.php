@@ -96,15 +96,15 @@
 @endguest
 
         @if(Auth::user() !== null)
-            <p class="me-2 pt-2">{{ Auth::user()->name }}<p>
+          <p class="me-2 pt-2">{{ Auth::user()->name }}<p>
 
-            <form action="{{ route('logout') }}" method="POST">
-              @csrf
-              <button type="submit" class="hamburger nav-item" for="toggleMenu">
-              <i class="fa-solid fa-x close"></i>
+          <form action="{{ route('logout') }}" method="POST">
+            @csrf
+            <button type="submit" class="hamburger nav-item" for="toggleMenu">
+            <i class="fa-solid fa-x close"></i>
 
-            </button>
-            </form>
+          </button>
+          </form>
 
         @endif
 
