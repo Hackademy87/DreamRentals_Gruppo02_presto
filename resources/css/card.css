@@ -134,7 +134,7 @@ background: linear-gradient(347deg, rgba(149,221,212,1) 0%, rgba(149,221,212,0.8
   left:160%;
 
 }
-
+ 
 
 
 
@@ -153,6 +153,23 @@ background: linear-gradient(347deg, rgba(149,221,212,1) 0%, rgba(149,221,212,0.8
     width: 360px;
     height: 490px;
   }
+
+  .google2{
+    position: unset;
+
+  }
+  .google{
+    position: unset;
+  }
+  .annulla{
+    display: none;
+  }
+  .annullaTel{
+  display:table-row;
+}
+
+
+
 }
 
 @media (min-width:480px) and (max-width:599px)  {

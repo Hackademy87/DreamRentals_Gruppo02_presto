@@ -233,7 +233,7 @@
   }
 
   .space{
-    height: 120px;
+    height: 0px;
   }
 
 
@@ -271,16 +271,19 @@
     width: 60vw;
   }
 
-  .container{
-    height: 500px;
-    position: relative;
-  }
+  
   .gif-image{
     margin-top: 10px;
     padding-top: 20px;
     display: flex;
     position: absolute;
     left: 20vw;
+  }
+  .space{
+    height: 1300px;
+  }
+  .table{
+    display: none;
   }
   }
 
@@ -317,7 +320,9 @@
 
   }
 
-
+  @media (min-width:400px)  and (max-width:1200px) { 
+    
+  }
 
 
   @media (min-width: 760px) {

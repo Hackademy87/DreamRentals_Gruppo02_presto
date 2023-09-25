@@ -31,6 +31,10 @@
 }
 
 .product-text{
-    padding-left: 60px;
-    padding-right: 60px;
+    /* padding-left: 60px;
+    padding-right: 60px; */
+}
+
+@media (min-width:320px) and (max-width:479px)  {
+    
 }
