@@ -43,23 +43,23 @@
                 </div>
             </div>
         </div>
-       
+
         <div class="col-6 google">
         <table class="table">
             <thead>
                 <tr>
-                
-                <th scope="col">Adulti</th>
+
+                <th scope="col">Adult</th>
                 <th scope="col">Medical</th>
-                <th scope="col">Satira</th>
-                <th scope="col">Violenza</th>
-                <th scope="col">Razzismo</th>
+                <th scope="col">Satire</th>
+                <th scope="col">Violence</th>
+                <th scope="col">Spicy</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach($product->images as $image)
                     <tr>
-                        
+
                         <td class="text-center"><p><span class="{{$image->adult}}"></span></p></td>
                         <td class="text-center"><p><span class="{{$image->medical}}"></span></p></td>
                         <td class="text-center"><p><span class="{{$image->spoof}}"></span></p></td>
@@ -70,30 +70,30 @@
             </tbody>
         </table>
         </div>
-        <div class="col-8 google2 d-flex"> 
+        <div class="col-8 google2 d-flex">
             @foreach($product->images as $image)
         <table class="mx-3 table">
-           
+
             <tr>
                 <th>
                     Tags
                 </th>
-            </tr> 
-            
-           
+            </tr>
+
+
             @if($image->labels)
             @foreach($image->labels as $label)
-            <tr > 
+            <tr >
                 <td >
                     {{$label}}
                 </td>
             </tr>
-            
+
             @endforeach
             @endif
-           
-           
-        </table> 
+
+
+        </table>
         @endforeach
         </div>
     </div>
