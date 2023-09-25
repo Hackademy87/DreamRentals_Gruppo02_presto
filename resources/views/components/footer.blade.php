@@ -8,7 +8,7 @@
           <div class="footer-logo">
             <a class="footer-logo-link" href="#">
               <span class="hidden-link-text">LOGO</span>
-              <img src="https://cdn.discordapp.com/attachments/1151071500313575554/1153670912365838416/image.png" alt="logo" width="250" height="250">
+              <img class="logo" src="https://cdn.discordapp.com/attachments/1151071500313575554/1153670912365838416/image.png" alt="logo" width="250" height="250">
             </a>
           </div>
         </div>

@@ -90,13 +90,23 @@ text-align: center;
 }
 
 
-/* MEDIA QUERY */
+@media (min-width:320px) and (max-width:479px)  {
+    .title{
+        font-size:20px;
+        padding: 50px;
+    }
 
-@media (min-width:600px) and (max-width: 800px)  { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
-   /* .contenitore{
-    height: 500px;
-   } */
-  }
-  @media (min-width:801px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */
+    .section{
+        height: 50%;
+    }
 
-  }
+    
+}
+
+@media (min-width:320px) and (max-width:479px)  {
+    .section{
+        width: 50vw;
+        height: 75vh;
+    }
+}
+
