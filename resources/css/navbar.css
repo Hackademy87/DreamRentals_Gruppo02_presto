@@ -166,7 +166,7 @@ padding: 5px;
 }
 
 .close{
-  color: rgb(250, 250, 250);
+  color: var(---ColorPrimary);
   font-size: 30px;
 
 }
