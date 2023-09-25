@@ -1,6 +1,8 @@
     //? PRESENTAZIONE
 
-    const text = document.querySelector(".sec-text");
+  const text = document.querySelector(".sec-text");
+  if (text){
+
     const textLoad = () => {
       setTimeout(() => {
         text.textContent = "The Difference";
@@ -16,3 +18,4 @@
   
     textLoad();
     setInterval(textLoad, 4000);
+  }
