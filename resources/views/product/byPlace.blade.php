@@ -6,8 +6,8 @@
 
             <div class="col-12">
 
-                <h2>Prodotti per luogo {{ $place->name }}</h2>
-
+                <h2>{{__('ui.perLuoghi')}} {{ $place->name }}</h2>
+                <img width="80px" src="/earth.gif" alt="">
             </div>
 
         </div>

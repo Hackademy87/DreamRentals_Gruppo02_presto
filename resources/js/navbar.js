@@ -19,41 +19,32 @@ window.addEventListener('scroll', () => {
   const navbar = document.getElementById('navbar');
   const navbarLinks = document.querySelectorAll('.navbar-nav a.nav-link');
   const scrollTop = window.scrollY;
+  const video = document.querySelector('.video-bg');
 
 
-  if (scrollTop > 1700) {
-    navbar.style.height = '150px';
-    navbar.style.backgroundColor = 'rgba(127, 255, 212, 0)';
+  if (scrollTop > 2000) {
 
-    navbarLinks.forEach(link => {
-
-      link.style.color = 'rgba(0, 126, 167, 0.829)';
-      link.style.fontSize = '20px';
-      link.addEventListener('mouseover', () => {
-        link.style.color = 'white'
-        link.style.textDecoration = 'underline';
-        link.addEventListener('mouseout', () => {
-          link.style.textDecoration = 'none';
-          link.style.color = 'rgba(0, 126, 167, 0.829)'
-        });
-      });
-    });
+    navbar.style.backgroundColor = 'white';
   }
 
   else {
-    navbar.style.height = '100px';
+
     navbar.style.backgroundColor = '';
 
-    navbarLinks.forEach(link => {
-      link.style.color = ''; //
-      link.style.fontSize = '';
-      link.removeEventListener('mouseover', null);
-      link.removeEventListener('mouseout', null);
-
-    });
 
   }
+console.log(scrollTop);
+if (scrollTop > 1800){
+video.style.opacity = 0;
+
+}
+else{
+    video.style.opacity = 0.8;
+}
+
+
 });
+
 
 
 

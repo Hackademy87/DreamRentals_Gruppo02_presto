@@ -1,6 +1,9 @@
 <x-layout>
     <x-slot name="title"> Best Movie Blog </x-slot>
+<div class="container-header">
+
     <video class="video-bg " src="case.mp4" autoplay muted loop></video>
+</div>
     <x-header/>
 
     <div class="container-fluid contenitore my-5">

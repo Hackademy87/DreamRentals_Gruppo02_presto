@@ -25,6 +25,7 @@ return [
     'lavora'=>"WORK WITH US",
     'categorie'=>"Categories",
     'servizi'=>"Services",
+    'regioni'=>"Regions",
 
 //Create-Form//
 
@@ -36,16 +37,19 @@ return [
 'copertina'=>"Cover",
 'cancImg'=>"Delete",
 'crea'=>"create",
+'regione'=>"Regions",
 
 
 //Categoria//
 
 'appartamento'=>"Apartment",
  'villa'=>"Villa",
- 'palazzo'=>"Palace'",
+ 'palazzo'=>"Palace",
  'residence'=>"Residence",
  'complesso'=>"Complex",
- 'casa vacanze'=>"Vacation Home"
+ 'casa vacanze'=>"Vacation Home",
+ 'perCategorie'=>"products by category",
+ 'perLuoghi'=>"products by location"
 
 ];
 
