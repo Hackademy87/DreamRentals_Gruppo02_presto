@@ -33,6 +33,9 @@
               <li class="nav-item">
                 <a class="dropdown-item" href="{{route('contatti')}}">{{__('ui.lavora')}}</a>
               </li>
+              <li class="nav-item">
+                <a class="dropdown-item" href="{{route('payment.index')}}">Pagamenti</a>
+              </li>
             </ul>
           </li>
         @endauth

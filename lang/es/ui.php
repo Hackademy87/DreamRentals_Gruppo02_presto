@@ -51,7 +51,13 @@ return [
 
  'dettagli'=>"detalles del anuncio",
  'motivazione'=>"motivación",
- 'esperienza'=>"experiencia"
+ 'esperienza'=>"experiencia",
+
+ 'benvenuto'=>"Bienvenido a nuestro mundo",
+ 'geo'=>"Ubicación geográfica: la ubicación geográfica de una región puede tener un impacto significativo en el mercado inmobiliario. Las regiones costeras, por ejemplo, pueden tener una gran demanda de propiedades cerca del mar, mientras que las regiones montañosas pueden resultar atractivas para quienes buscan una casa en una zona tranquila y pintoresca.",
+ 'lavoro'=>"Precio de la propiedad: las regiones pueden diferir mucho en lo que respecta a los precios inmobiliarios. Las regiones urbanas o metrópolis tienden a tener precios más altos que las regiones rurales o menos pobladas. Esto puede estar determinado por la oferta y la demanda locales, la disponibilidad de servicios y las oportunidades de empleo.",
+
+ 'scopri'=>"Descubre la tua casa da sogno",
 
  ];
 

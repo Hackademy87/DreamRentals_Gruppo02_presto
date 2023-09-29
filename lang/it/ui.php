@@ -49,7 +49,12 @@ return [
 
     'dettagli'=>"Dettagli annuncio",
     'motivazione'=>"Motivazione",
-    'esperienza'=>"Esperienza"
+    'esperienza'=>"Esperienza",
 
+    'benvenuto'=>"Benvenuti nel Nostro Mondo",
+    'geo'=>"Posizione Geografica: La posizione geografica di una regione può avere un impatto significativo sul mercato immobiliare. Le regioni costiere, per esempio, possono avere una domanda elevata per le proprietà vicine al mare, mentre le regioni montuose potrebbero essere attraenti per chi cerca una casa in una zona tranquilla e panoramica.",
+    'lavoro'=>"Prezzo delle Proprietà: Le regioni possono differire notevolmente per quanto riguarda i prezzi delle proprietà immobiliari. Le regioni urbane o le metropoli tendono ad avere prezzi più elevati rispetto alle regioni rurali o meno popolate. Questo può essere determinato dalla domanda e dall'offerta locali, dalla disponibilità di servizi e dalle opportunità di lavoro.",
+
+    'scopri'=>"Scopri la tua casa da sogno",
 
     ];

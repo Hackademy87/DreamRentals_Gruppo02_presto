@@ -53,6 +53,13 @@ return [
 
  'dettagli'=>"Announcement details",
  'motivazione'=>"Motivation",
- 'esperienza'=>"Experience"
+ 'esperienza'=>"Experience",
+
+ 'benvenuto'=>"Welcome to Our World",
+ 'geo'=>"Geographic Location: The geographic location of a region can have a significant impact on the real estate market. Coastal regions, for example, may have high demand for properties close to the sea, while mountainous regions may be attractive to those looking for a home in a quiet, scenic area.",
+ 'lavoro'=>"Property Price: Regions can differ greatly when it comes to real estate prices. Urban regions or metropolises tend to have higher prices than rural or less populated regions. This can be determined by local supply and demand, availability of services and employment opportunities.",
+
+ 'scopri'=>"Discover your dream home",
+
 ];
 

@@ -5,6 +5,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RevisorController;
+use App\Http\Controllers\StripeController;
 use App\Models\Product;
 
 /*
@@ -83,3 +84,15 @@ Route::get('admin/dashboard',[AdminController::class, 'dashboard'])->name('admin
 // CAMBIO LINGUA
 
 Route::post('/lingua/{lang}',[ProductController::class,'setLanguage'])->name('set_language.locale');
+
+
+
+
+
+// ROTTE PAGAMENTI
+
+Route::get('payment/index',[StripeController::class,'index'])->name('payment.index');
+
+Route::post('payment/checkout',[StripeController::class,'checkout'])->name('payment.checkout');
+
+Route::get('payment/success',[StripeController::class,'success'])->name('payment.success');
