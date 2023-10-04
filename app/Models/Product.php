@@ -20,17 +20,17 @@ class Product extends Model
 
 
     public function toSearchableArray():array{
-            $place = $this->place;
-            $category = $this->category;
-            $array =[
-                'id'=> $this->id,
-                'name'=> $this->name,
-                'description'=>$this->description,
-                "category"=> $category,
-                "place"=> $place
-            ];
-            return $array;
-        }
+        $place = $this->place;
+        $category = $this->category;
+        $array =[
+            'id'=> $this->id,
+            'name'=> $this->name,
+            'description'=>$this->description,
+            "category"=> $category,
+            "place"=> $place
+        ];
+        return $array;
+    }
 
 
     public function category(){

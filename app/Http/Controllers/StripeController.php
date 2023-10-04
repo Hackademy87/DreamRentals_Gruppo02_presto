@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-
+use App\Models\Product;
 use Stripe\Stripe;
 use Illuminate\Http\Request;
 use Stripe\Checkout\Session;
@@ -20,14 +20,17 @@ public function checkout(){
 Stripe::setApiKey(config(key:'stripe.sk'));
 
 $session = Session::create([
+    $product = Product::all(),
+
     'line_items'=>[
         [
         'price_data'=>[
             'currency'=>'gbp',
             'product_data'=>[
-            'name'=>'send me Money !!!',
+            'name'=>$product->name,
+            'id'=>$product->id,
             ],
-            'unity_amount'=>500,
+            'unity_amount'=>$product->price,
         ],
             'quantity'=>1,
         ],
@@ -42,7 +45,7 @@ return redirect()->away($session->url);
 
 public function success(){
 
-return view('payment.index');
+return view('payment.success');
 }
 
 
